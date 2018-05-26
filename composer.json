@@ -1,0 +1,14 @@
+{
+    "name": "someshwer/world",
+    "description": "This package provides all countries, states, cities names and also ISO, STD codes and tomezones.",
+    "type": "standard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Someshwer Bandapally",
+            "email": "bsomeshwer89@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
