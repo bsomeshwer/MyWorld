@@ -3,21 +3,38 @@
 use Someshwer\World\Data\DataRepository;
 
 /**
- * Created by PhpStorm.
- * User: babi
- * Date: 26/5/18
- * Time: 12:06 PM
+ * Author: Someshwer Bandapally
+ * Date: 26-05-2018
+ *
+ * This class is a repository contains
+ * different methods to provide different
+ * implementations.
+ *
+ * Class Countries
+ * @package Someshwer\World\Res
  */
 class Countries
 {
 
+    /**
+     * @var DataRepository
+     */
     private $data;
 
+    /**
+     * Countries constructor.
+     * @param DataRepository $dataRepository
+     */
     public function __construct(DataRepository $dataRepository)
     {
         $this->data = $dataRepository;
     }
 
+    /**
+     * Get all countries
+     *
+     * @return array
+     */
     public function all()
     {
         $all_countries = $this->data->countries();
@@ -28,6 +45,12 @@ class Countries
         return ['countries' => $countries];
     }
 
+    /**
+     * Search country by search string
+     * 
+     * @param $search_string
+     * @return array
+     */
     public function searchCountry($search_string)
     {
         $all_countries = $this->data->countries();

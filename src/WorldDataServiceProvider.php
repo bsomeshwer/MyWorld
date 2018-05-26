@@ -5,10 +5,11 @@ use Someshwer\World\Data\DataRepository;
 use Someshwer\World\Res\Countries;
 
 /**
- * Created by PhpStorm.
- * User: babi
- * Date: 26/5/18
- * Time: 11:17 AM
+ * Author: Someshwer Bandapally
+ * Date: 26-05-2018
+ *
+ * Class WorldDataServiceProvider
+ * @package Someshwer\World
  */
 class WorldDataServiceProvider extends ServiceProvider
 {
