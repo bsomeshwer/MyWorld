@@ -23,7 +23,8 @@ class DataRepository
     {
         return [
             'afghanistan',
-            'albania', 'algeria', 'andorra', 'angola', 'antigua-and-barbuda',
+            'albania',
+            'algeria', 'andorra', 'angola', 'antigua-and-barbuda',
             'bangladesh', 'barbados', 'belarus', 'belgium', 'belize', 'benin', 'bhutan', 'bolivia',
             'chad', 'chile', 'china', 'colombia', 'comoros', 'democratic-republic-of-the-congo',
             'czech-republic', 'denmark', 'djibouti', 'dominica', 'dominican-republic', 'ecuador',
