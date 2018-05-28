@@ -3,7 +3,7 @@
     "description": "This package provides all countries, states, cities names and also ISO, STD codes and tomezones.",
     "type": "library",
     "keywords": ["cities", "world", "countries"],
-    "homepage": "https://github.com/bsomeshwer/MyWorld",
+    "homepage": "https://github.com/bsomeshwer/my-world",
     "license": "MIT",
     "authors": [
         {
