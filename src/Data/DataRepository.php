@@ -1,4 +1,4 @@
-<?php namespace Someshwer\World\Data;
+<?php namespace Someshwer\MyWorld\Data;
 
 /**
  * Author: Someshwer Bandapally

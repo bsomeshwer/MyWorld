@@ -1,6 +1,6 @@
-<?php namespace Someshwer\World\Res;
+<?php namespace Someshwer\MyWorld\Res;
 
-use Someshwer\World\Data\DataRepository;
+use Someshwer\MyWorld\Data\DataRepository;
 
 /**
  * Author: Someshwer Bandapally

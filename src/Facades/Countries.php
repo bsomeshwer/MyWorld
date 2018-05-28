@@ -1,4 +1,4 @@
-<?php namespace Someshwer\World\Facades;
+<?php namespace Someshwer\MyWorld\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**

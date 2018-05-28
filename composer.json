@@ -1,5 +1,5 @@
 {
-    "name": "someshwer/world",
+    "name": "someshwer/my-world",
     "description": "This package provides all countries, states, cities names and also ISO, STD codes and tomezones.",
     "type": "library",
     "keywords": ["cities", "world", "countries"],
@@ -13,8 +13,8 @@
     ],
     "minimum-stability": "stable",
     "support": {
-        "issues": "https://github.com/bsomeshwer/world/issues",
-        "source": "https://github.com/bsomeshwer/world"
+        "issues": "https://github.com/bsomeshwer/my-world/issues",
+        "source": "https://github.com/bsomeshwer/my-world"
     },
     "require": {
         "php": "^5.4 || ^7.0"
@@ -23,9 +23,9 @@
         "phpunit/phpunit": "^4.7|>=5.0 <5.4"
     },
     "autoload": {
-        "psr-4": {"World\\": "world/src"}
+        "psr-4": {"Someshwer\\MyWorld\\": "someshwer/my-world/src/"}
     },
     "autoload-dev": {
-        "psr-4": {"World\\": "world/src"}
+        "psr-4": {"Someshwer\\MyWorld\\Tests\\": "someshwer/my-world/src/tests"}
     }
 }

@@ -1,8 +1,8 @@
-<?php namespace Someshwer\World;
+<?php namespace Someshwer\MyWorld;
 
 use Illuminate\Support\ServiceProvider;
-use Someshwer\World\Data\DataRepository;
-use Someshwer\World\Res\Countries;
+use Someshwer\MyWorld\Data\DataRepository;
+use Someshwer\MyWorld\Res\Countries;
 
 /**
  * Author: Someshwer Bandapally
