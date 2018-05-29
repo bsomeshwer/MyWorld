@@ -4,8 +4,8 @@
 [![Latest Stable Version](https://poser.pugx.org/someshwer/my-world/v/stable.svg)](https://packagist.org/packages/someshwer/my-world)
 [![Latest Unstable Version](https://poser.pugx.org/someshwer/my-world/v/unstable.svg)](https://packagist.org/packages/someshwer/my-world)
 
-Laravel MyWorld is a bundle for Laravel, providing useful world information that is the dat and information about
-countries, timezones, ISO country codes, STD codes of countries  etc.
+Laravel MyWorld is a bundle for Laravel, providing useful world information that is all country names, timezones,
+ISO country codes, STD codes of countries  etc.
 
 As of now this package only provides countries data that is all country names for all most 195 countries over the world.
 
