@@ -2,7 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 use Someshwer\MyWorld\Data\DataRepository;
-use Someshwer\MyWorld\Res\Countries;
+use Someshwer\MyWorld\Res\World;
 
 /**
  * Author: Someshwer Bandapally
@@ -21,8 +21,8 @@ class WorldDataServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('someshwer-countries', function(){
-            return new Countries(new DataRepository());
+        $this->app->bind('bs-world', function(){
+            return new World(new DataRepository());
         });
     }
 
