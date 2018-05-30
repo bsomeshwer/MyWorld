@@ -2,6 +2,8 @@
 
 namespace Someshwer\MyWorld\Res;
 
+use Illuminate\Encryption\Encrypter;
+use Illuminate\Support\Facades\Config;
 use Someshwer\MyWorld\Data\DataRepository;
 
 /**
@@ -24,6 +26,16 @@ class World
     private $data;
 
     /**
+     * @var string
+     */
+    private $en_key = 'Someshwer1@2#BandapallySomeshwer';
+
+    /**
+     * @var string
+     */
+    private $cipher = 'AES-256-CBC';
+
+    /**
      * World constructor.
      * @param DataRepository $dataRepository
      */
@@ -42,7 +54,9 @@ class World
     {
         $str_length = strlen($all_countries_data) - 4;
         $all_countries_trimmed_data = substr($all_countries_data, 0, 2) . substr($all_countries_data, 3, $str_length);
-        $all_countries = decrypt($all_countries_trimmed_data);
+        // $hash = new Encrypter($this->en_key, Config::get('app.cipher'));
+        $hash = new Encrypter($this->en_key, $this->cipher);
+        $all_countries = $hash->decrypt($all_countries_trimmed_data);
         return $all_countries;
     }
 

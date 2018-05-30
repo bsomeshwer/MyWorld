@@ -33,7 +33,7 @@ Now add the alias at app/config/app.php`.
     ]
 
 You can start by publishing the configuration. This is an optional step since the package does not contain configuration to publish.
-Hence it is better to ignore publishing by the following command.
+Hence it is better to ignore this step for publishing by the following command.
 
     $ php artisan vendor:publish
 
