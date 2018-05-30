@@ -3,7 +3,6 @@
 namespace Someshwer\MyWorld\Res;
 
 use Illuminate\Encryption\Encrypter;
-use Illuminate\Support\Facades\Config;
 use Someshwer\MyWorld\Data\DataRepository;
 
 /**
@@ -82,10 +81,15 @@ class World
      * @param $search_string
      * @return array
      */
-    public function searchCountry($search_string)
+    public function searchCountry($search_string = null)
     {
         $all_countries_data = $this->data->countries();
         $all_countries = $this->optimizeCountryData($all_countries_data);
+        if ($search_string == null) {
+            return array_map(function ($it) {
+                return studly_case($it);
+            }, $all_countries);
+        }
         $countries = array_map(function ($it) {
             return studly_case($it);
         }, array_filter($all_countries, function ($item) use ($search_string) {
