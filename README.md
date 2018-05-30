@@ -49,6 +49,17 @@ This will return all the country names in the world.
 
     2. World::searchCountry('xx');
 
-Where the parameter 'xx' is some search string. You can search the countries by search string.
+Where the parameter 'xx' is some search string. You can search the countries by search string. If search
+string is not provided then all country names will be returned.
+
+    3. World::continents();
+
+This will return all continents names.
+
+    4. World::oceans();
+
+This will return all ocean name in the world.
+
+
 
 

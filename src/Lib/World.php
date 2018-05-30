@@ -1,6 +1,6 @@
 <?php
 
-namespace Someshwer\MyWorld\Res;
+namespace Someshwer\MyWorld\Lib;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
@@ -96,6 +96,14 @@ class World
             return strpos($item, strtolower($search_string)) === 0;
         }));
         return ['countries' => array_values($countries)];
+    }
+
+    public function isoCodes()
+    {
+        $all_countries_iso_data = $this->data->countriesISOData();
+        $iso_data = $this->optimizeCountryData($all_countries_iso_data);
+        $iso_codes = json_decode($iso_data, true);
+        return $iso_codes;
     }
 
 }

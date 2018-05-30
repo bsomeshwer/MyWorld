@@ -2,7 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 use Someshwer\MyWorld\Data\DataRepository;
-use Someshwer\MyWorld\Res\World;
+use Someshwer\MyWorld\Lib\World;
 
 /**
  * Author: Someshwer Bandapally
