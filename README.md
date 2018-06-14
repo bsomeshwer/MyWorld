@@ -10,7 +10,7 @@ ISO country codes, STD codes of countries  etc.
 As of now this package only provides countries data that is all country names for all most 195 countries over the world.
 
 **Please note that always use latest version of this package and must use Laravel 5 and above versions only,
-this package may not properly work with older versions of Laravel.
+as this package may not properly work with older versions of Laravel.
 
 ## Installation
 

@@ -1,9 +1,9 @@
-<?php
-
-namespace Someshwer\MyWorld\Lib;
+<?php namespace Someshwer\MyWorld\Lib;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
+use Someshwer\MyWorld\Utils\UnionTerritories;
+use Someshwer\MyWorld\Utils\Wonders;
 
 /**
  * Author: Someshwer Bandapally
@@ -16,8 +16,10 @@ use Someshwer\MyWorld\Data\DataRepository;
  * Class World
  * @package Someshwer\World\Res
  */
-class World
+class World extends Continents
 {
+
+    use Wonders, UnionTerritories;
 
     /**
      * @var DataRepository
@@ -40,6 +42,7 @@ class World
      */
     public function __construct(DataRepository $dataRepository)
     {
+        parent::__construct($dataRepository);
         $this->data = $dataRepository;
     }
 
@@ -68,6 +71,7 @@ class World
         $all_iso = $hash->decrypt($all_iso_trimmed_data);
         return $all_iso;
     }
+
 
     /**
      * Get all countries
@@ -145,7 +149,7 @@ class World
 
     public function searchIsoCodes($key)
     {
-
+        //TODO:: Implement it soon
     }
 
     public function filterIsoInfoByCountryName($iso_codes, $name)
@@ -203,7 +207,6 @@ class World
         $regions = $this->formatRegions($iso_codes);
         return $this->filterRegions($regions, $region);
     }
-
 
 }
 
