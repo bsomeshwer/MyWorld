@@ -1,9 +1,9 @@
-<?php namespace Someshwer\MyWorld\Lib;
+<?php  namespace Someshwer\MyWorld\Utils;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
 
-class Oceans
+trait Oceans
 {
 
     /**
@@ -25,6 +25,7 @@ class Oceans
     {
         $this->data = $dataRepository;
     }
+
 
     private function optimizeOceansData($all_oceans_data)
     {
@@ -57,6 +58,5 @@ class Oceans
         $formatted_oceans = $this->formatOceans($oceans);
         return ['oceans' => $formatted_oceans];
     }
-
 
 }

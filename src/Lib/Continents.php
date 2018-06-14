@@ -1,9 +1,9 @@
-<?php  namespace Someshwer\MyWorld\Lib;
+<?php namespace Someshwer\MyWorld\Lib;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
 
-class Continents extends Oceans
+class Continents extends Countries
 {
 
     /**
