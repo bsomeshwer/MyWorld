@@ -3,6 +3,15 @@
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
 
+/**
+ * Author: Someshwer Bandapally
+ * Date: 14-07-2018
+ *
+ * This class gives the list of continents names
+ *
+ * Class Continents
+ * @package Someshwer\MyWorld\Lib
+ */
 class Continents extends Countries
 {
 
@@ -21,12 +30,21 @@ class Continents extends Countries
      */
     private $cipher = 'AES-256-CBC';
 
+    /**
+     * Continents constructor.
+     * @param DataRepository $dataRepository
+     */
     public function __construct(DataRepository $dataRepository)
     {
         parent::__construct($dataRepository);
         $this->data = $dataRepository;
     }
 
+    /**
+     * Get optimized continents data
+     *
+     * @return string
+     */
     private function getOptimizedContinentsData()
     {
         $all_continents_data = $this->data->continents();
@@ -35,7 +53,13 @@ class Continents extends Countries
         return $continents_data;
     }
 
-    public function optimizeContinentsData($all_continents_data)
+    /**
+     * Optimize continents data
+     *
+     * @param $all_continents_data
+     * @return string
+     */
+    private function optimizeContinentsData($all_continents_data)
     {
         $str_length = strlen($all_continents_data) - 4;
         $all_continents_trimmed_data = substr($all_continents_data, 0, 2) . substr($all_continents_data, 3, $str_length);
@@ -45,6 +69,12 @@ class Continents extends Countries
         return $all_continents;
     }
 
+    /**
+     * Format continents
+     *
+     * @param $continents
+     * @return $this
+     */
     private function formatContinents($continents)
     {
         return collect($continents)->transform(function ($item) {
@@ -55,6 +85,11 @@ class Continents extends Countries
         });
     }
 
+    /**
+     * Get list of continents names
+     *
+     * @return array
+     */
     public function continents()
     {
         $continents = $this->getOptimizedContinentsData();

@@ -3,7 +3,16 @@
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
 
-class ISOCodes
+/**
+ * Author: Someshwer Bandapally
+ * Date: 14-07-2018
+ *
+ * This class provides ISO codes data
+ *
+ * Class ISOCodes
+ * @package Someshwer\MyWorld\Lib
+ */
+class ISOCodes extends TimeZones
 {
 
     /**
@@ -21,11 +30,22 @@ class ISOCodes
      */
     private $cipher = 'AES-256-CBC';
 
+    /**
+     * ISOCodes constructor.
+     * @param DataRepository $dataRepository
+     */
     public function __construct(DataRepository $dataRepository)
     {
+        parent::__construct($dataRepository);
         $this->data = $dataRepository;
     }
 
+    /**
+     * Optimize ISO data
+     *
+     * @param $all_iso_data
+     * @return string
+     */
     private function optimizeISOData($all_iso_data)
     {
         $str_length = strlen($all_iso_data) - 4;
@@ -36,6 +56,11 @@ class ISOCodes
         return $all_iso;
     }
 
+    /**
+     * Get optimized ISO data
+     *
+     * @return mixed
+     */
     private function getOptimizedIsoData()
     {
         $all_countries_iso_data = $this->data->countriesISOData();
@@ -43,6 +68,13 @@ class ISOCodes
         return $iso_codes = json_decode($iso_data, true);
     }
 
+    /**
+     * Optimize ISO result
+     *
+     * @param $iso_codes
+     * @param $alpha_code
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
+     */
     private function optimizeIsoResult($iso_codes, $alpha_code)
     {
         $group_by = ctype_digit($alpha_code) ? 'country_numeric_code' : ((strlen($alpha_code) == 2) ? 'alpha_2' : 'alpha_3');
@@ -55,6 +87,12 @@ class ISOCodes
         }
     }
 
+    /**
+     * Format regions
+     *
+     * @param $iso_codes
+     * @return array
+     */
     private function formatRegions($iso_codes)
     {
         $regions = collect($iso_codes)->groupBy('region')->all();
@@ -68,6 +106,13 @@ class ISOCodes
         return $new_regions;
     }
 
+    /**
+     * Filter regions
+     *
+     * @param $regions
+     * @param $region
+     * @return static
+     */
     private function filterRegions($regions, $region)
     {
         return collect($regions)->filter(function ($item, $key) use ($region) {
@@ -75,11 +120,21 @@ class ISOCodes
         });
     }
 
+    /**
+     * Get ISO codes
+     *
+     * @return mixed
+     */
     public function isoCodes()
     {
         return $this->getOptimizedIsoData();
     }
 
+    /**
+     * Get regions
+     *
+     * @return static
+     */
     public function regions()
     {
         $iso_codes = $this->getOptimizedIsoData();
@@ -90,11 +145,23 @@ class ISOCodes
         });
     }
 
+    /**
+     * Search ISO codes
+     *
+     * @param $key
+     */
     public function searchIsoCodes($key)
     {
         //TODO:: Implement it soon
     }
 
+    /**
+     * Filter ISO info by country name
+     *
+     * @param $iso_codes
+     * @param $name
+     * @return static
+     */
     public function filterIsoInfoByCountryName($iso_codes, $name)
     {
         return collect($iso_codes)->map(function ($item, $key) {
@@ -106,6 +173,12 @@ class ISOCodes
         })->collapse();
     }
 
+    /**
+     * Get ISO info by country name
+     *
+     * @param null $name
+     * @return array|ISOCodes
+     */
     public function isoInfoByCountryName($name = null)
     {
         if ($name == null) return [];
@@ -115,6 +188,12 @@ class ISOCodes
         return $result;
     }
 
+    /**
+     * Get ISO info by code
+     *
+     * @param null $code
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
+     */
     public function isoInfoByCode($code = null)
     {
         if ($code == null) {
@@ -124,6 +203,12 @@ class ISOCodes
         return $this->optimizeIsoResult($iso_codes, $code);
     }
 
+    /**
+     * ISO codes by region
+     *
+     * @param null $region
+     * @return ISOCodes
+     */
     public function isoCodesByRegion($region = null)
     {
         $iso_codes = $this->getOptimizedIsoData();
@@ -131,6 +216,12 @@ class ISOCodes
         return $this->filterRegions($regions, $region);
     }
 
+    /**
+     * Format ISO error response
+     *
+     * @param null $param
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
+     */
     private function isoErrorResponse($param = null)
     {
         $status = 'INVALID_CODE';

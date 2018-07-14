@@ -3,6 +3,15 @@
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
 
+/**
+ * Author: Someshwer Bandapally
+ * Date: 14-07-2018
+ *
+ * Gives union territories names
+ *
+ * Class UnionTerritories
+ * @package Someshwer\MyWorld\Utils
+ */
 trait UnionTerritories
 {
 
@@ -21,11 +30,21 @@ trait UnionTerritories
      */
     private $cipher = 'AES-256-CBC';
 
+    /**
+     * UnionTerritories constructor.
+     * @param DataRepository $dataRepository
+     */
     public function __construct(DataRepository $dataRepository)
     {
         $this->data = $dataRepository;
     }
 
+    /**
+     * Optimizes union territories data
+     *
+     * @param $all_territories_data
+     * @return string
+     */
     private function optimizeTerritoriesData($all_territories_data)
     {
         $str_length = strlen($all_territories_data) - 4;
@@ -34,6 +53,11 @@ trait UnionTerritories
         return $hash->decrypt($all_territories_trimmed_data);
     }
 
+    /**
+     * Fetches union territories names from a file
+     *
+     * @return string
+     */
     private function getOptimizedTerritoriesData()
     {
         $all_territories_data = $this->data->unionTerritories();
@@ -41,6 +65,12 @@ trait UnionTerritories
         return $territories_data;
     }
 
+    /**
+     * Formats union territories
+     *
+     * @param $territories
+     * @return static
+     */
     private function formatTerritories($territories)
     {
         return collect($territories)->transform(function ($item, $key) {
@@ -52,6 +82,11 @@ trait UnionTerritories
         })->values();
     }
 
+    /**
+     * Returns all union territories names
+     *
+     * @return array
+     */
     public function unionTerritories()
     {
         $territories = $this->getOptimizedTerritoriesData();

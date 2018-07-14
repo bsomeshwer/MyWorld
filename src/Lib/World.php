@@ -37,6 +37,9 @@ class World extends Continents
         $this->data = $dataRepository;
     }
 
+    /**
+     * Tells some useful information about this package
+     */
     public function info()
     {
         //TODO:: Tell something useful about package.

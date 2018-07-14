@@ -1,5 +1,6 @@
 <?php namespace Someshwer\MyWorld\Data;
 
+use DateTimeZone;
 use Illuminate\Support\Facades\File;
 
 /**
@@ -15,6 +16,11 @@ use Illuminate\Support\Facades\File;
 class DataRepository
 {
 
+    /**
+     * Path to data files
+     *
+     * @var string
+     */
     private $base_path = __DIR__ . '/../Res/';
 
     /**
@@ -29,35 +35,73 @@ class DataRepository
         return File::get($path);
     }
 
+    /**
+     * This method reads country ISO  data from a file
+     *
+     * @return mixed
+     */
     public function countriesISOData()
     {
         $path = $this->base_path . 'country_iso.txt';
         return File::get($path);
     }
 
-
+    /**
+     * This method reads the continents data from a file
+     *
+     * @return mixed
+     */
     public function continents()
     {
         $path = $path = $this->base_path . 'continents.txt';
         return File::get($path);
     }
 
+    /**
+     * Reading oceans data from a file
+     *
+     * @return mixed
+     */
     public function oceans()
     {
         $path = $path = $this->base_path . 'oceans.txt';
         return File::get($path);
     }
 
+    /**
+     * Reading union territories data from a file
+     *
+     * @return mixed
+     */
     public function unionTerritories()
     {
         $path = $path = $this->base_path . 'territories.txt';
         return File::get($path);
     }
 
+    /**
+     * Reading wonders data from a file
+     *
+     * @return mixed
+     */
     public function wonders()
     {
         $path = $path = $this->base_path . 'wonders.txt';
         return File::get($path);
+    }
+
+    /**
+     * List all timezones
+     *
+     * timezone_identifiers_list() is also returns same list of timezones.
+     * It is just an alias for 'DateTimeZone::listIdentifiers(DateTimeZone::ALL)'
+     *
+     * @return array
+     */
+    public function timezones()
+    {
+        // timezone_identifiers_list() is also returns same list of timezones.
+        return DateTimeZone::listIdentifiers(DateTimeZone::ALL);
     }
 
 }

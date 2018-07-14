@@ -3,6 +3,15 @@
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
 
+/**
+ * Author: Someshwer Bandapally
+ * Date: 14-07-2018
+ *
+ * Provides the data of world wonders
+ *
+ * Class Wonders
+ * @package Someshwer\MyWorld\Utils
+ */
 trait Wonders
 {
 
@@ -26,6 +35,12 @@ trait Wonders
         $this->data = $dataRepository;
     }
 
+    /**
+     * Optimizes wonders data
+     *
+     * @param $all_wonders_data
+     * @return string
+     */
     private function optimizeWondersData($all_wonders_data)
     {
         $str_length = strlen($all_wonders_data) - 4;
@@ -34,6 +49,11 @@ trait Wonders
         return $hash->decrypt($all_wonders_trimmed_data);
     }
 
+    /**
+     * Fetches wonders data from a file and processes it
+     *
+     * @return string
+     */
     private function getOptimizedWondersData()
     {
         $all_wonders_data = $this->data->wonders();
@@ -41,6 +61,12 @@ trait Wonders
         return $territories_data;
     }
 
+    /**
+     * Formats wonders data
+     *
+     * @param $wonders
+     * @return static
+     */
     private function formatWonders($wonders)
     {
         return collect($wonders)->transform(function ($item, $key) {
@@ -51,6 +77,11 @@ trait Wonders
         })->values();
     }
 
+    /**
+     * Returns all wonders names
+     *
+     * @return array
+     */
     public function wonders()
     {
         $wonders = $this->getOptimizedWondersData();

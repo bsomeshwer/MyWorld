@@ -1,8 +1,17 @@
-<?php  namespace Someshwer\MyWorld\Utils;
+<?php namespace Someshwer\MyWorld\Utils;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
 
+/**
+ * Author: Someshwer Bandapally
+ * Date: 14-07-2018
+ *
+ * Provides all oceans names
+ *
+ * Class Oceans
+ * @package Someshwer\MyWorld\Utils
+ */
 trait Oceans
 {
 
@@ -21,12 +30,21 @@ trait Oceans
      */
     private $cipher = 'AES-256-CBC';
 
+    /**
+     * Oceans constructor.
+     * @param DataRepository $dataRepository
+     */
     public function __construct(DataRepository $dataRepository)
     {
         $this->data = $dataRepository;
     }
 
-
+    /**
+     * Optimize oceans data
+     *
+     * @param $all_oceans_data
+     * @return string
+     */
     private function optimizeOceansData($all_oceans_data)
     {
         $str_length = strlen($all_oceans_data) - 4;
@@ -35,6 +53,11 @@ trait Oceans
         return $hash->decrypt($all_oceans_trimmed_data);
     }
 
+    /**
+     * Returns optimized oceans data
+     *
+     * @return string
+     */
     private function getOptimizedOceansData()
     {
         $all_oceans_data = $this->data->oceans();
@@ -42,6 +65,12 @@ trait Oceans
         return $continents_data;
     }
 
+    /**
+     * Formats oceans data
+     *
+     * @param $oceans
+     * @return $this
+     */
     private function formatOceans($oceans)
     {
         return collect($oceans)->transform(function ($item) {
@@ -52,6 +81,11 @@ trait Oceans
         });
     }
 
+    /**
+     * Returns all oceans names
+     *
+     * @return array
+     */
     public function oceans()
     {
         $oceans = $this->getOptimizedOceansData();

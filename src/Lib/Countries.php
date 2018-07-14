@@ -3,6 +3,15 @@
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
 
+/**
+ * Author: Someshwer Bandapally
+ * Date: 14-07-2018
+ *
+ * This class gives all country names
+ *
+ * Class Countries
+ * @package Someshwer\MyWorld\Lib
+ */
 class Countries extends ISOCodes
 {
 
@@ -21,6 +30,10 @@ class Countries extends ISOCodes
      */
     private $cipher = 'AES-256-CBC';
 
+    /**
+     * Countries constructor.
+     * @param DataRepository $dataRepository
+     */
     public function __construct(DataRepository $dataRepository)
     {
         parent::__construct($dataRepository);
