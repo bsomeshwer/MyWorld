@@ -91,7 +91,7 @@ class DataRepository
     }
 
     /**
-     * List all timezones
+     * Reading all timezones from predefined php library
      *
      * timezone_identifiers_list() is also returns same list of timezones.
      * It is just an alias for 'DateTimeZone::listIdentifiers(DateTimeZone::ALL)'
@@ -102,6 +102,17 @@ class DataRepository
     {
         // timezone_identifiers_list() is also returns same list of timezones.
         return DateTimeZone::listIdentifiers(DateTimeZone::ALL);
+    }
+
+    /**
+     * Reading all currencies from a text file
+     *
+     * @return mixed
+     */
+    public function currencies()
+    {
+        $path = $path = $this->base_path . 'currencies.txt';
+        return File::get($path);
     }
 
 }

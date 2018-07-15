@@ -11,7 +11,7 @@ use Someshwer\MyWorld\Data\DataRepository;
  * Class TimeZones
  * @package Someshwer\MyWorld\Lib
  */
-class TimeZones
+class TimeZones extends Currencies
 {
 
     /**
@@ -25,6 +25,7 @@ class TimeZones
      */
     public function __construct(DataRepository $dataRepository)
     {
+        parent::__construct($dataRepository);
         $this->data = $dataRepository;
     }
 
