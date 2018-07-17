@@ -11,8 +11,8 @@ As of now this package only provides countries data that is all country names fo
 along with continent names, ocean names, union territories names, world wonders names, ISO codes and ISO information,
 timezones and timezones information, and currencies and currency codes and symbols information.
 
-Note: As of now the support for database option is not there, It will be implemented soon.
-(See this area for new updates.)
+    Note: As of now the support for database option is not there, It will be implemented soon.
+          (See this area for new updates.)
 
 **Please note that always use latest version of this package and must use Laravel 5 and above versions only,
 as this package may not properly work with older versions of Laravel.
