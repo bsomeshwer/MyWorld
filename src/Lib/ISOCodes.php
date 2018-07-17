@@ -162,7 +162,7 @@ class ISOCodes extends TimeZones
      * @param $name
      * @return static
      */
-    public function filterIsoInfoByCountryName($iso_codes, $name)
+    private function filterIsoInfoByCountryName($iso_codes, $name)
     {
         return collect($iso_codes)->map(function ($item, $key) {
             $item['display_name'] = $item['name'];

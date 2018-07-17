@@ -1,7 +1,7 @@
 <?php namespace Someshwer\MyWorld\Lib;
 
-use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
+use Someshwer\MyWorld\Utils\Continents;
 use Someshwer\MyWorld\Utils\Oceans;
 use Someshwer\MyWorld\Utils\UnionTerritories;
 use Someshwer\MyWorld\Utils\Wonders;
@@ -17,10 +17,10 @@ use Someshwer\MyWorld\Utils\Wonders;
  * Class World
  * @package Someshwer\World\Res
  */
-class World extends Continents
+class World extends Countries
 {
 
-    use Oceans, Wonders, UnionTerritories;
+    use Continents, Oceans, Wonders, UnionTerritories;
 
     /**
      * @var DataRepository

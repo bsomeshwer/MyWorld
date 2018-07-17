@@ -1,4 +1,4 @@
-<?php namespace Someshwer\MyWorld\Lib;
+<?php namespace Someshwer\MyWorld\Utils;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
@@ -12,7 +12,7 @@ use Someshwer\MyWorld\Data\DataRepository;
  * Class Continents
  * @package Someshwer\MyWorld\Lib
  */
-class Continents extends Countries
+trait Continents
 {
 
     /**
@@ -36,7 +36,6 @@ class Continents extends Countries
      */
     public function __construct(DataRepository $dataRepository)
     {
-        parent::__construct($dataRepository);
         $this->data = $dataRepository;
     }
 
