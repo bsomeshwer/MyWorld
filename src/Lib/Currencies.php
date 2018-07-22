@@ -12,7 +12,7 @@ use Someshwer\MyWorld\Data\DataRepository;
  * Class Currencies
  * @package Someshwer\MyWorld\Lib
  */
-class Currencies
+class Currencies extends StdCodes
 {
 
     /**
@@ -32,6 +32,7 @@ class Currencies
 
     public function __construct(DataRepository $dataRepository)
     {
+        parent::__construct($dataRepository);
         $this->data = $dataRepository;
     }
 

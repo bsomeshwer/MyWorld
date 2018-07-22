@@ -115,4 +115,15 @@ class DataRepository
         return File::get($path);
     }
 
+    /**
+     * Reading all std codes from a text file
+     *
+     * @return mixed
+     */
+    public function stdCodes()
+    {
+        $path = $path = $this->base_path . 'std_codes.txt';
+        return File::get($path);
+    }
+
 }

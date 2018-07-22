@@ -155,6 +155,27 @@ if it is not matched with any value in the database files, in that case an empty
 You can search the currency by currency code. If the currency code provided as parameter is null or
 if it is not matched with any value in the database, in that case an empty array will be returned as response.
 
+    23. World::stdCodes();
+
+It returns all the STD codes for all countries.
+
+    24. World::searchStdCodes('xx');
+
+You can search the STD code by search string. If the search string provided as parameter is null or
+if it is not matched with any value in the database, in that case an empty array will be returned as response.
+
+    25. World::stdCodeByCountryName('country_name');
+
+You can search the STD code by country name. If the country name provided as parameter is null or
+if it is not matched with any value in the database, in that case an empty array will be returned as response.
+
+    26. World::stdCodeByCountryCode('country_code');
+
+You can search the STD code by country code. If the country code provided as parameter is null or
+if it is not matched with any value in the database, in that case an empty array will be returned as response.
+
+
+
 
 
 
