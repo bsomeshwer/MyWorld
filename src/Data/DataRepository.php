@@ -126,4 +126,26 @@ class DataRepository
         return File::get($path);
     }
 
+    /**
+     * Reading all states from a text file
+     *
+     * @return mixed
+     */
+    public function states()
+    {
+        $path = $path = $this->base_path . 'states.txt';
+        return File::get($path);
+    }
+
+    /**
+     * Reading all countries from countries helper for states
+     *
+     * @return mixed
+     */
+    public function countriesHelper()
+    {
+        $path = $path = $this->base_path . 'countries_helper.txt';
+        return File::get($path);
+    }
+
 }

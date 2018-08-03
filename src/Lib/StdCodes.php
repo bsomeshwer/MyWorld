@@ -12,7 +12,7 @@ use Someshwer\MyWorld\Data\DataRepository;
  * Class StdCodes
  * @package Someshwer\MyWorld\Lib
  */
-class StdCodes
+class StdCodes extends States
 {
 
     /**
@@ -36,6 +36,7 @@ class StdCodes
      */
     public function __construct(DataRepository $dataRepository)
     {
+        parent::__construct($dataRepository);
         $this->data = $dataRepository;
     }
 
