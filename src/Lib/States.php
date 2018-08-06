@@ -2,6 +2,7 @@
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
+use Someshwer\MyWorld\Helpers\MyPaginate;
 
 /**
  * Author: Someshwer Bandapally
@@ -12,7 +13,7 @@ use Someshwer\MyWorld\Data\DataRepository;
  * Class StdCodes
  * @package Someshwer\MyWorld\Lib
  */
-class States
+class States extends Cities
 {
 
     /**
@@ -36,6 +37,7 @@ class States
      */
     public function __construct(DataRepository $dataRepository)
     {
+        parent::__construct($dataRepository);
         $this->data = $dataRepository;
     }
 
@@ -113,13 +115,29 @@ class States
     }
 
     /**
-     * Returns all states
+     * Returns all states.
      *
+     * If pagination is enabled for states in config file
+     * then the result contains paginated data otherwise all records wil be returned.
+     *
+     * @param null $page_number
      * @return array
      */
-    public function states()
+    public function states($page_number = null)
     {
-        return $this->formatStatesData();
+        $states_data = $this->formatStatesData();
+        if (config('world.pagination.states') == false) {
+            return $states_data;
+        }
+        $per_page = config('world.pagination.states_per_page');
+        $ceil_val = ceil(count($states_data) / $per_page);
+        $request_url = request()->url();
+        $total_records = count($states_data);
+        $pagination_data = MyPaginate::getPagination($request_url, $page_number, $per_page,
+            $ceil_val, $total_records);
+        $data = collect($states_data)->forPage($page_number, $per_page)->values();
+        $pagination_data['data'] = $data;
+        return $pagination_data;
     }
 
     /**

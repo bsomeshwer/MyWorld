@@ -37,10 +37,9 @@ Now add the alias at app/config/app.php`.
          'World' => Someshwer\MyWorld\Facades\World::class,
     ]
 
-You can start by publishing the configuration. This is an optional step since the package does not contain configuration to publish.
-Hence it is better to ignore this step for publishing by the following command.
+You can start by publishing the configuration.
 
-    $ php artisan vendor:publish
+    $ php artisan vendor:publish --provider="Someshwer\MyWorld\WorldDataServiceProvider"
 
 That's it !! You are done with package installation...
 
@@ -174,11 +173,50 @@ if it is not matched with any value in the database, in that case an empty array
 You can search the STD code by country code. If the country code provided as parameter is null or
 if it is not matched with any value in the database, in that case an empty array will be returned as response.
 
+    27. World::states();
 
+It returns all state names along with it's country name.
 
+    28. World::searchStates('search_key');
 
+You can search states by any search string. If the search key provided as parameter is null or
+if it is not matched with any value in the database, an empty array will be returned as response.
 
+    29. World::countriesForStates('country_code');
 
+It returns all country names in case you want to search states by a country.
+
+    30. World::getStatesByCountry('country_name');
+
+You can search the states by a country name. If the country name provided as parameter is null or
+if it is not matched with any value in the database, an empty array will be returned as response.
+
+    31. World::cities();
+
+It returns all city names along with state and country to which it belong to.
+
+    32. World::searchCities('search_key');
+
+You can search the cities by any search string. If the search key provided as parameter is null or
+if it is not matched with any value in the database, then an empty array will be returned as response.
+
+    33. World::statesForCities();
+
+It returns all state names in case you want to search cities by a state.
+
+    34. World::countriesForCities();
+
+It returns all country names in case you want to search cities by a country.
+
+    35. World::getCitiesByStateName('state_name');
+
+You can search the cities by a state. If the state name provided as parameter is null or
+if it is not matched with any value in the database, then an empty array will be returned as response.
+
+    36. World::getCitiesByCountryName('country_name');
+
+You can search cities by a country. If the country name provided as parameter is null or
+if it is not matched with any value in the database, an empty array will be returned as response.
 
 
 
