@@ -23,24 +23,45 @@ return [
     'pagination' => [
 
         /**
-         * To enable pagination for iso codes set this to TRUE
+         * To enable pagination for iso codes set this to TRUE.
          */
-        'iso_codes' => false,
+        'iso_codes' => true,
 
         /**
-         * To enable pagination for states set this to TRUE
+         * To enable pagination for states set this to TRUE.
          * To disable pagination for states set this to FALSE.
          */
-        'states' => false,
+        'states' => true,
 
         /**
-         *To enable pagination for cities set this to TRUE
+         *To enable pagination for cities set this to TRUE -
          * Or set it FALSE to disable pagination for cities.
          *
-         * Note: For better performance t is recommended to set pagination option to TRUE for cities
-         * because it returns more than three thousand(3000) records
+         * Note: For better performance t is recommended to set pagination option to TRUE for cities -
+         * because it returns more than three thousand(3000) records.
          */
-        'cities' => false
+        'cities' => true,
+
+        /**
+         *
+         * This enables us to manage the number of records that we wish
+         * to show per page for iso data.
+         */
+        'iso_per_page' => 50,
+
+        /**
+         *
+         * This enables us to show number of states per page
+         * if pagination is enabled for sates.
+         */
+        'states_per_page' => 50,
+
+        /**
+         *
+         * This enables us to show number of cities per page
+         * if pagination is enabled for cities.
+         */
+        'cities_per_page' => 100
 
     ]
 

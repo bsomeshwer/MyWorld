@@ -3,6 +3,7 @@
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
+use Someshwer\MyWorld\Helpers\MyPaginate;
 
 class Cities
 {
@@ -134,13 +135,30 @@ class Cities
     }
 
     /**
-     * Returns all cities
+     * Returns all cities.
      *
+     * If pagination is enabled for cities in config file
+     * then the result contains paginated data otherwise all records wil be returned.
+     *
+     * @param null $page_number
      * @return array
      */
-    public function cities()
+    public function cities($page_number = null)
     {
-        return $this->formatCitiesData();
+        $cities_data = $this->formatCitiesData();
+        if (config('world.pagination.cities') == false) {
+            return $cities_data;
+        }
+        $per_page = config('world.pagination.cities_per_page');
+        $ceil_val = ceil(count($cities_data) / $per_page);
+        $request_url = request()->url();
+        $total_records = count($cities_data);
+        $pagination_data = MyPaginate::getPagination($request_url, $page_number, $per_page,
+            $ceil_val, $total_records);
+        $data = collect($cities_data)->forPage($page_number, $per_page)->values();
+        $pagination_data['data'] = $data;
+        return $pagination_data;
+
     }
 
     /**

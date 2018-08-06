@@ -37,10 +37,9 @@ Now add the alias at app/config/app.php`.
          'World' => Someshwer\MyWorld\Facades\World::class,
     ]
 
-You can start by publishing the configuration. This is an optional step since the package does not contain configuration to publish.
-Hence it is better to ignore this step for publishing by the following command.
+You can start by publishing the configuration.
 
-    $ php artisan vendor:publish
+    $ php artisan vendor:publish --provider="Someshwer\MyWorld\WorldDataServiceProvider"
 
 That's it !! You are done with package installation...
 
