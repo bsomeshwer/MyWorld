@@ -7,7 +7,8 @@
  */
 
 
-//dd('hi I am auto loaded');
+// This method is not using since had problem with auto-loading
+// files using composer.json file inside package root folder.
 
 if (!function_exists('getPaginate')) {
 
