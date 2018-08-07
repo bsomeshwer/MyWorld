@@ -148,4 +148,10 @@ class DataRepository
         return File::get($path);
     }
 
+    public function cities()
+    {
+        $path = $path = $this->base_path . 'cities.txt';
+        return File::get($path);
+    }
+
 }

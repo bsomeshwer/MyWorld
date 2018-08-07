@@ -2,6 +2,7 @@
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
+use Someshwer\MyWorld\Helpers\MyPaginate;
 
 /**
  * Author: Someshwer Bandapally
@@ -121,13 +122,32 @@ class ISOCodes extends TimeZones
     }
 
     /**
-     * Get ISO codes
+     * Get ISO codes. This method returns all ISO codes data.
      *
+     * This method also supports pagination.
+     * If pagination is enabled for states in config file
+     * then the result contains paginated data otherwise all records
+     * wil be directly returned.
+     *
+     * @param null $page_number
      * @return mixed
      */
-    public function isoCodes()
+    public function isoCodes($page_number = null)
     {
-        return $this->getOptimizedIsoData();
+        $iso_data = $this->getOptimizedIsoData();
+        if (config('world.pagination.iso_codes') == false) {
+            return $iso_data;
+        }
+        $per_page = config('world.pagination.iso_per_page');
+        $ceil_val = ceil(count($iso_data) / $per_page);
+        $request_url = request()->url();
+        $total_records = count($iso_data);
+        $pagination_data = MyPaginate::getPagination($request_url, $page_number,
+            $per_page, $ceil_val, $total_records);
+        $data = collect($iso_data)->forPage($page_number, $per_page)->values();
+        $pagination_data['data'] = $data;
+        return $pagination_data;
+
     }
 
     /**
@@ -146,13 +166,22 @@ class ISOCodes extends TimeZones
     }
 
     /**
-     * Search ISO codes
+     * Search ISO codes by country name,
+     * or by iso code, or by numeric country code.
      *
      * @param $key
+     * @return array
      */
-    public function searchIsoCodes($key)
+    public function searchIsoCodes($key = null)
     {
-        //TODO:: Implement it soon
+        if ($key == null) return [];
+        $iso_data = $this->getOptimizedIsoData();
+        return array_values(array_filter($iso_data, function ($item) use ($key) {
+            return (str_contains(strtolower($item['name']), strtolower($key)) ||
+                str_contains(strtolower($item['alpha_2']), strtolower($key)) ||
+                str_contains(strtolower($item['alpha_3']), strtolower($key)) ||
+                str_contains(strtolower($item['country_numeric_code']), strtolower($key)));
+        }));
     }
 
     /**

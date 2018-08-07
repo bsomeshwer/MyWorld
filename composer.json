@@ -1,31 +1,39 @@
 {
-    "name": "someshwer/my-world",
-    "description": "This package provides all countries, states, cities names and also ISO, STD codes and tomezones.",
-    "type": "library",
-    "keywords": ["cities", "world", "countries"],
-    "homepage": "https://github.com/bsomeshwer/my-world",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Someshwer Bandapally",
-            "email": "bsomeshwer89@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "support": {
-        "issues": "https://github.com/bsomeshwer/my-world/issues",
-        "source": "https://github.com/bsomeshwer/my-world"
-    },
-    "require": {
-        "php": "^5.4 || ^7.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^4.7|>=5.0 <5.4"
-    },
-    "autoload": {
-        "psr-4": {"Someshwer\\MyWorld\\": "src/"}
-    },
-    "autoload-dev": {
-        "psr-4": {"Someshwer\\MyWorld\\Tests\\": "src/tests"}
+  "name": "someshwer/my-world",
+  "description": "This package provides all countries, states, cities names and also ISO, STD codes and tomezones.",
+  "type": "library",
+  "keywords": [
+    "cities",
+    "world",
+    "countries"
+  ],
+  "homepage": "https://github.com/bsomeshwer/my-world",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Someshwer Bandapally",
+      "email": "bsomeshwer89@gmail.com"
     }
+  ],
+  "minimum-stability": "stable",
+  "support": {
+    "issues": "https://github.com/bsomeshwer/my-world/issues",
+    "source": "https://github.com/bsomeshwer/my-world"
+  },
+  "require": {
+    "php": "^5.4 || ^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.7|>=5.0 <5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Someshwer\\MyWorld\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Someshwer\\MyWorld\\Tests\\": "src/tests"
+    }
+  }
 }

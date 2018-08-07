@@ -21,7 +21,7 @@ class WorldDataServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('bs-world', function(){
+        $this->app->bind('bs-world', function () {
             return new World(new DataRepository());
         });
     }
@@ -34,7 +34,8 @@ class WorldDataServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__ . '/routes/routes.php');
+        // $this->loadRoutesFrom(__DIR__ . '/routes/routes.php');
+        $this->publishes([__DIR__ . '/Config/world.php' => config_path('world.php')], 'config');
     }
 
 
