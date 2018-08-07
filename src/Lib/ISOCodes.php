@@ -166,13 +166,22 @@ class ISOCodes extends TimeZones
     }
 
     /**
-     * Search ISO codes
+     * Search ISO codes by country name,
+     * or by iso code, or by numeric country code.
      *
      * @param $key
+     * @return array
      */
-    public function searchIsoCodes($key)
+    public function searchIsoCodes($key = null)
     {
-        //TODO:: Implement it soon
+        if ($key == null) return [];
+        $iso_data = $this->getOptimizedIsoData();
+        return array_values(array_filter($iso_data, function ($item) use ($key) {
+            return (str_contains(strtolower($item['name']), strtolower($key)) ||
+                str_contains(strtolower($item['alpha_2']), strtolower($key)) ||
+                str_contains(strtolower($item['alpha_3']), strtolower($key)) ||
+                str_contains(strtolower($item['country_numeric_code']), strtolower($key)));
+        }));
     }
 
     /**
