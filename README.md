@@ -37,10 +37,9 @@ Now add the alias at app/config/app.php`.
          'World' => Someshwer\MyWorld\Facades\World::class,
     ]
 
-You can start by publishing the configuration. This is an optional step since the package does not contain configuration to publish.
-Hence it is better to ignore this step for publishing by the following command.
+You can start by publishing the configuration.
 
-    $ php artisan vendor:publish
+    $ php artisan vendor:publish --provider="Someshwer\MyWorld\WorldDataServiceProvider"
 
 That's it !! You are done with package installation...
 
@@ -76,6 +75,8 @@ It returns all wonders names in the world.
     7. World::isoCodes();
 
 It returns all iso codes of the countries in the world.
+You can also get paginated result for iso codes. If you want pagination for iso codes then just set 'iso' option to TRUE in config/world.php configuration file. Also you can set how many number of records you want to display per page.
+Just go through config options available in config/world.php file.
 
     8. World::regions();
 
@@ -177,6 +178,8 @@ if it is not matched with any value in the database, in that case an empty array
     27. World::states();
 
 It returns all state names along with it's country name.
+You can also get paginated result for states. If you want pagination for states then just set 'states' option to TRUE in config/world.php configuration file. Also you can set how many number of records you want to display per page.
+Just go through config options available in config/world.php file.
 
     28. World::searchStates('search_key');
 
@@ -195,6 +198,8 @@ if it is not matched with any value in the database, an empty array will be retu
     31. World::cities();
 
 It returns all city names along with state and country to which it belong to.
+You can also get paginated result for cities. If you want pagination for cities then just set 'cities' option to TRUE in config/world.php configuration file. Also you can set how many number of records you want to display per page.
+Just go through configuration options available in config/world.php file.
 
     32. World::searchCities('search_key');
 
