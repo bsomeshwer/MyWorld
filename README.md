@@ -7,9 +7,11 @@
 Laravel MyWorld is a bundle for Laravel, providing useful world information that is all country names, timezones,
 ISO country codes, STD codes of countries  etc.
 
-As of now this package only provides countries data that is all country names for all most 195 countries over the world
+This package only provides countries data that is all country names for all most 195 countries over the world
 along with continent names, ocean names, union territories names, world wonders names, ISO codes and ISO information,
 timezones and timezones information, and currencies and currency codes and symbols information.
+
+Also provides country wise states and state wise cities information.
 
     Note: As of now the support for database option is not there, It will be implemented soon.
           (See this area for new updates.)
