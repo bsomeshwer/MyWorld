@@ -215,9 +215,9 @@ When you use pagination, you must give the page number from the request url.
  For example: You are calling cities like World::cities(). For pagination you must send the parameter as
  World::cities($request->get('page')) and url should be like 'http://localhost:8000/cities?page=3'.
 
-    For pagination: Url must be similar to "http://localhost:8000/cities?page=3"
-                    cities() function calling must be like "return World::cities($request->get('page'));".
-                    Otherwise pagination may not work properly.
+For pagination: Url must be similar to "http://localhost:8000/cities?page=3"
+ cities() function calling must be like "return World::cities($request->get('page'));".
+ Otherwise pagination may not work properly.
 
     32. World::searchCities('search_key');
 
