@@ -125,6 +125,7 @@ class States extends Cities
      */
     public function states($page_number = null)
     {
+        $page_number = ($page_number == null) ? 1 : $page_number;
         $states_data = $this->formatStatesData();
         if (config('world.pagination.states') == false) {
             return $states_data;

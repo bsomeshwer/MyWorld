@@ -134,6 +134,7 @@ class ISOCodes extends TimeZones
      */
     public function isoCodes($page_number = null)
     {
+        $page_number = ($page_number == null) ? 1 : $page_number;
         $iso_data = $this->getOptimizedIsoData();
         if (config('world.pagination.iso_codes') == false) {
             return $iso_data;

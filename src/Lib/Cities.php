@@ -145,6 +145,7 @@ class Cities
      */
     public function cities($page_number = null)
     {
+        $page_number = ($page_number == null) ? 1 : $page_number;
         $cities_data = $this->formatCitiesData();
         if (config('world.pagination.cities') == false) {
             return $cities_data;
