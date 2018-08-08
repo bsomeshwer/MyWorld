@@ -80,6 +80,10 @@ It returns all iso codes of the countries in the world.
 You can also get paginated result for iso codes. If you want pagination for iso codes then just set 'iso' option to TRUE in config/world.php configuration file. Also you can set how many number of records you want to display per page.
 Just go through config options available in config/world.php file.
 
+When you use pagination, you must give the page number from the request url.
+ For example: You are calling iso codes like World::isoCodes(). For pagination you must send the parameter as
+ World::isoCodes($request->get('page')) and url should be like 'http://localhost:8000/isoCodes?page=3'.
+
     8. World::regions();
 
 It returns all regions names for iso codes.
@@ -183,6 +187,10 @@ It returns all state names along with it's country name.
 You can also get paginated result for states. If you want pagination for states then just set 'states' option to TRUE in config/world.php configuration file. Also you can set how many number of records you want to display per page.
 Just go through config options available in config/world.php file.
 
+When you use pagination, you must give the page number from the request url.
+ For example: You are calling states like World::states(). For pagination you must send the parameter as
+ World::states($request->get('page')) and url should be like 'http://localhost:8000/states?page=3'.
+
     28. World::searchStates('search_key');
 
 You can search states by any search string. If the search key provided as parameter is null or
@@ -202,6 +210,14 @@ if it is not matched with any value in the database, an empty array will be retu
 It returns all city names along with state and country to which it belong to.
 You can also get paginated result for cities. If you want pagination for cities then just set 'cities' option to TRUE in config/world.php configuration file. Also you can set how many number of records you want to display per page.
 Just go through configuration options available in config/world.php file.
+
+When you use pagination, you must give the page number from the request url.
+ For example: You are calling cities like World::cities(). For pagination you must send the parameter as
+ World::cities($request->get('page')) and url should be like 'http://localhost:8000/cities?page=3'.
+
+    For pagination: Url must be similar to "http://localhost:8000/cities?page=3"
+                    cities() function calling must be like "return World::cities($request->get('page'));".
+                    Otherwise pagination may not work properly.
 
     32. World::searchCities('search_key');
 
