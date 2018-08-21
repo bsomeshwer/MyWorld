@@ -27,14 +27,16 @@ Open terminal, go to root directory and run the following command:
 
 The package will be installed.
 
-Edit `app/config/app.php` and add the `provider` and `filter`
+Add `Someshwer\MyWorld\WorldDataServiceProvider::class` class to `providers` array in `config/app.php` file.
 
+    Ex:-
     'providers' => [
         Someshwer\MyWorld\WorldDataServiceProvider::class,
     ]
 
-Now add the alias at app/config/app.php`.
+Now add the alias to `aliases` array in config/app.php`.
 
+    Ex:- 
     'aliases' => [
          'World' => Someshwer\MyWorld\Facades\World::class,
     ]
