@@ -30,14 +30,20 @@ The package will be installed.
 Add `Someshwer\MyWorld\WorldDataServiceProvider::class` class to `providers` array in `config/app.php` file.
 
     Ex:-
+    
     'providers' => [
+        ...,
+        ...,
         Someshwer\MyWorld\WorldDataServiceProvider::class,
     ]
 
 Now add the alias to `aliases` array in config/app.php`.
 
     Ex:- 
+    
     'aliases' => [
+         ...,
+         ...,
          'World' => Someshwer\MyWorld\Facades\World::class,
     ]
 
