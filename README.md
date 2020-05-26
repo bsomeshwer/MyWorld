@@ -1,6 +1,12 @@
 # Laravel - World Countries
 
 [![Build Status](https://travis-ci.com/bsomeshwer/world-countries.svg?branch=master)](https://travis-ci.com/bsomeshwer/world-countries)
+[![Code Quality](https://img.shields.io/scrutinizer/g/bsomeshwer/world-countries.svg?style=flat-square)](https://scrutinizer-ci.com/g/bsomeshwer/world-countries/?branch=master)
+![Code Quality Score](https://www.code-inspector.com/project/8534/score/svg)
+![Code Grade](https://www.code-inspector.com/project/8534/status/svg)
+[![StyleCI](https://github.styleci.io/repos/134948183/shield?branch=master)](https://github.styleci.io/repos/134948183)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/bsomeshwer/world-countries/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+
 [![Total Downloads](https://poser.pugx.org/someshwer/world-countries/downloads.svg)](https://packagist.org/packages/someshwer/world-countries)
 [![Latest Stable Version](https://poser.pugx.org/someshwer/world-countries/v/stable.svg)](https://packagist.org/packages/someshwer/world-countries)
 [![Latest Unstable Version](https://poser.pugx.org/someshwer/world-countries/v/unstable.svg)](https://packagist.org/packages/someshwer/world-countries)
