@@ -3,7 +3,7 @@
  * Created by Someshwer Bandapally <bsomeshwer89@gmail.com>.
  * User: Someshwer
  * Date: 05/08/2018
- * Time: 12:54 AM IST
+ * Time: 12:54 AM IST.
  */
 
 return [
@@ -43,26 +43,23 @@ return [
         'cities' => false,
 
         /**
-         *
          * This enables us to manage the number of records that we wish
          * to show per page for iso data.
          */
         'iso_per_page' => 50,
 
         /**
-         *
          * This enables us to show number of states per page
          * if pagination is enabled for sates.
          */
         'states_per_page' => 50,
 
         /**
-         *
          * This enables us to show number of cities per page
          * if pagination is enabled for cities.
          */
-        'cities_per_page' => 100
+        'cities_per_page' => 100,
 
-    ]
+    ],
 
 ];
