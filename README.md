@@ -6,6 +6,7 @@
 ![Code Grade](https://www.code-inspector.com/project/8534/status/svg)
 [![StyleCI](https://github.styleci.io/repos/134948183/shield?branch=master)](https://github.styleci.io/repos/134948183)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/bsomeshwer/world-countries/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+[![Coverage Status](https://coveralls.io/repos/github/bsomeshwer/world-countries/badge.svg?branch=master)](https://coveralls.io/github/bsomeshwer/world-countries?branch=master)
 
 [![License](https://poser.pugx.org/phpunit/phpunit/license)](//packagist.org/packages/phpunit/phpunit)
 [![Latest Stable Version](https://poser.pugx.org/phpunit/phpunit/v)](//packagist.org/packages/phpunit/phpunit)[![Latest Unstable Version](https://poser.pugx.org/phpunit/phpunit/v/unstable)](//packagist.org/packages/phpunit/phpunit)
