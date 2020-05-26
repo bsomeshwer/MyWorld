@@ -1,10 +1,10 @@
 <?php
 
-namespace Someshwer\MyWorld;
+namespace Someshwer\WorldCountries;
 
 use Illuminate\Support\ServiceProvider;
-use Someshwer\MyWorld\Data\DataRepository;
-use Someshwer\MyWorld\Lib\World;
+use Someshwer\WorldCountries\Data\DataRepository;
+use Someshwer\WorldCountries\Lib\World;
 
 /**
  * Author: Someshwer Bandapally

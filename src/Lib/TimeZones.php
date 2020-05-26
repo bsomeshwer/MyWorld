@@ -1,8 +1,8 @@
 <?php
 
-namespace Someshwer\MyWorld\Lib;
+namespace Someshwer\WorldCountries\Lib;
 
-use Someshwer\MyWorld\Data\DataRepository;
+use Someshwer\WorldCountries\Data\DataRepository;
 
 /**
  * Author: Someshwer Bandapally

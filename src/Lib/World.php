@@ -1,12 +1,12 @@
 <?php
 
-namespace Someshwer\MyWorld\Lib;
+namespace Someshwer\WorldCountries\Lib;
 
-use Someshwer\MyWorld\Data\DataRepository;
-use Someshwer\MyWorld\Utils\Continents;
-use Someshwer\MyWorld\Utils\Oceans;
-use Someshwer\MyWorld\Utils\UnionTerritories;
-use Someshwer\MyWorld\Utils\Wonders;
+use Someshwer\WorldCountries\Data\DataRepository;
+use Someshwer\WorldCountries\Utils\Continents;
+use Someshwer\WorldCountries\Utils\Oceans;
+use Someshwer\WorldCountries\Utils\UnionTerritories;
+use Someshwer\WorldCountries\Utils\Wonders;
 
 /**
  * Author: Someshwer Bandapally
@@ -48,7 +48,7 @@ class World extends Countries
     {
         return [
             'package_name' => 'Laravel - My World',
-            'description'  => 'Laravel MyWorld is a bundle for Laravel, providing useful world information that is all country names, timezones, ISO country codes, STD codes of countries  etc.
+            'description'  => 'Laravel WorldCountries is a bundle for Laravel, providing useful world information that is all country names, timezones, ISO country codes, STD codes of countries  etc.
             This package only provides countries data that is all country names for all most 195 countries over the world along with continent names, ocean names, union territories names, world wonders names, ISO codes and ISO information, timezones and timezones information, and currencies and currency codes and symbols information.
             Also provides country wise states and state wise cities information.',
             'latest_release' => '3.4.9',

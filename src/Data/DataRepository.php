@@ -1,6 +1,6 @@
 <?php
 
-namespace Someshwer\MyWorld\Data;
+namespace Someshwer\WorldCountries\Data;
 
 use DateTimeZone;
 use Illuminate\Support\Facades\File;

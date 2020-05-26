@@ -1,9 +1,9 @@
 <?php
 
-namespace Someshwer\MyWorld\Lib;
+namespace Someshwer\WorldCountries\Lib;
 
 use Illuminate\Encryption\Encrypter;
-use Someshwer\MyWorld\Data\DataRepository;
+use Someshwer\WorldCountries\Data\DataRepository;
 
 /**
  * Author: Someshwer Bandapally

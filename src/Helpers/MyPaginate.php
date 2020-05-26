@@ -1,6 +1,6 @@
 <?php
 
-namespace Someshwer\MyWorld\Helpers;
+namespace Someshwer\WorldCountries\Helpers;
 
 /**
  * Created by Someshwer<bsomeshwer89@gmail.com>.

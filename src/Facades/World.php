@@ -1,6 +1,6 @@
 <?php
 
-namespace Someshwer\MyWorld\Facades;
+namespace Someshwer\WorldCountries\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -8,10 +8,12 @@
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/bsomeshwer/world-countries/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![Coverage Status](https://coveralls.io/repos/github/bsomeshwer/world-countries/badge.svg?branch=master)](https://coveralls.io/github/bsomeshwer/world-countries?branch=master)
 
+[![codecov](https://codecov.io/gh/bsomeshwer/world-countries/branch/master/graph/badge.svg)](https://codecov.io/gh/bsomeshwer/world-countries)
 [![License](https://poser.pugx.org/phpunit/phpunit/license)](//packagist.org/packages/phpunit/phpunit)
-[![Latest Stable Version](https://poser.pugx.org/phpunit/phpunit/v)](//packagist.org/packages/phpunit/phpunit)[![Latest Unstable Version](https://poser.pugx.org/phpunit/phpunit/v/unstable)](//packagist.org/packages/phpunit/phpunit)
+[![Latest Stable Version](https://poser.pugx.org/phpunit/phpunit/v)](//packagist.org/packages/phpunit/phpunit)
+[![Latest Unstable Version](https://poser.pugx.org/phpunit/phpunit/v/unstable)](//packagist.org/packages/phpunit/phpunit)
 [![Total Downloads](https://poser.pugx.org/phpunit/phpunit/downloads)](//packagist.org/packages/phpunit/phpunit)
-[![composer.lock](https://poser.pugx.org/someshwer/my-world/composerlock)](//packagist.org/packages/someshwer/my-world)
+[![composer.lock](https://poser.pugx.org/someshwer/world-countries/composerlock)](//packagist.org/packages/someshwer/world-countries)
 
 Laravel WorldCountries is a bundle for Laravel, providing useful world information that is all country names, timezones,
 ISO country codes, STD codes of countries  etc.

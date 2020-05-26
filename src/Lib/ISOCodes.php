@@ -1,10 +1,10 @@
 <?php
 
-namespace Someshwer\MyWorld\Lib;
+namespace Someshwer\WorldCountries\Lib;
 
 use Illuminate\Encryption\Encrypter;
-use Someshwer\MyWorld\Data\DataRepository;
-use Someshwer\MyWorld\Helpers\MyPaginate;
+use Someshwer\WorldCountries\Data\DataRepository;
+use Someshwer\WorldCountries\Helpers\MyPaginate;
 
 /**
  * Author: Someshwer Bandapally
