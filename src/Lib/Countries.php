@@ -65,7 +65,7 @@ class Countries extends ISOCodes
     {
         $all_countries_data = $this->data->countries();
         $all_countries = $this->optimizeCountryData($all_countries_data);
-        $countries = collect($all_countries)->map(function ($item) {
+        $countries = collect($all_countries)->map(function($item) {
             // return title_case(str_replace('-',' ', $item));
             return studly_case($item);
         });
@@ -83,13 +83,13 @@ class Countries extends ISOCodes
         $all_countries_data = $this->data->countries();
         $all_countries = $this->optimizeCountryData($all_countries_data);
         if ($search_string == null) {
-            return array_map(function ($it) {
+            return array_map(function($it) {
                 return studly_case($it);
             }, $all_countries);
         }
-        $countries = array_map(function ($it) {
+        $countries = array_map(function($it) {
             return studly_case($it);
-        }, array_filter($all_countries, function ($item) use ($search_string) {
+        }, array_filter($all_countries, function($item) use ($search_string) {
             return strpos($item, strtolower($search_string)) === 0;
         }));
         return ['countries' => array_values($countries)];

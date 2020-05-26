@@ -89,11 +89,11 @@ class StdCodes extends States
             return [];
         }
         $std_codes = $this->getOptimizedStdCodesData();
-        return collect($std_codes)->filter(function ($item) use ($search_string) {
+        return collect($std_codes)->filter(function($item) use ($search_string) {
             return ((substr(strtolower($item['country_name']), 0, strlen($search_string)) == strtolower($search_string)) ||
                 (strtolower($item['country_code']) == strtolower($search_string)) ||
                 (strpos(strtolower($item['std_code']), strtolower($search_string)) !== false));
-        })->transform(function ($value) {
+        })->transform(function($value) {
             return array_except($value, 'id');
         })->values();
     }
@@ -110,9 +110,9 @@ class StdCodes extends States
             return [];
         }
         $std_codes = $this->getOptimizedStdCodesData();
-        return collect($std_codes)->filter(function ($item) use ($country_name) {
+        return collect($std_codes)->filter(function($item) use ($country_name) {
             return (substr(strtolower($item['country_name']), 0, strlen($country_name)) == strtolower($country_name));
-        })->transform(function ($value) {
+        })->transform(function($value) {
             return array_except($value, 'id');
         })->values();
     }
@@ -129,9 +129,9 @@ class StdCodes extends States
             return [];
         }
         $std_codes = $this->getOptimizedStdCodesData();
-        return collect($std_codes)->filter(function ($item) use ($country_code) {
+        return collect($std_codes)->filter(function($item) use ($country_code) {
             return (strtolower($item['country_code']) == strtolower($country_code));
-        })->transform(function ($value) {
+        })->transform(function($value) {
             return array_except($value, 'id');
         })->values();
     }

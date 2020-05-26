@@ -174,7 +174,7 @@ class Cities
             return [];
         }
         $cities = $this->formatCitiesData();
-        return array_values(array_filter($cities, function ($item) use ($search_key) {
+        return array_values(array_filter($cities, function($item) use ($search_key) {
             return starts_with(strtolower($item['city']), strtolower($search_key));
         }));
     }
@@ -188,7 +188,7 @@ class Cities
     public function statesForCities()
     {
         $states = $this->getOptimizedStatesData();
-        return array_map(function ($item) {
+        return array_map(function($item) {
             return $item['state_name'];
         }, $states);
     }
@@ -202,7 +202,7 @@ class Cities
     public function countriesForCities()
     {
         $countries = $this->getOptimizedCountriesData();
-        return array_map(function ($item) {
+        return array_map(function($item) {
             return $item['country_name'];
         }, $countries);
     }
@@ -219,7 +219,7 @@ class Cities
             return [];
         }
         $cities = $this->formatCitiesData();
-        return array_values(array_filter($cities, function ($item) use ($state_name) {
+        return array_values(array_filter($cities, function($item) use ($state_name) {
             return strtolower($item['state']) == strtolower($state_name);
         }));
     }
@@ -236,7 +236,7 @@ class Cities
             return [];
         }
         $cities = $this->formatCitiesData();
-        return array_values(array_filter($cities, function ($item) use ($country_name) {
+        return array_values(array_filter($cities, function($item) use ($country_name) {
             return strtolower($item['country']) == strtolower($country_name);
         }));
     }

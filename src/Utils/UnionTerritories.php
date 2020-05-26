@@ -73,7 +73,7 @@ trait UnionTerritories
      */
     private function formatTerritories($territories)
     {
-        return collect($territories)->transform(function ($item, $key) {
+        return collect($territories)->transform(function($item, $key) {
             $data['name'] = $key;
             $data['display_name'] = str_replace('_', ' ', title_case($key));
             $data['capital'] = str_replace('_', ' ', title_case($item));

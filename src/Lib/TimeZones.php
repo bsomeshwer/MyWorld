@@ -84,11 +84,15 @@ class TimeZones extends Currencies
      */
     public function timezonesByRegion($region = null)
     {
-        if (!$region) return [];
+        if (!$region) {
+            return [];
+        }
         $timezone_regions = $this->prepareTimezones();
         $timezone_regions_group = collect($timezone_regions)->groupBy('region');
         $regional_timezones = $timezone_regions_group->get($region);
-        if (!$regional_timezones) return [];
+        if (!$regional_timezones) {
+            return [];
+        }
         return $regional_timezones;
     }
 
@@ -100,9 +104,11 @@ class TimeZones extends Currencies
      */
     public function searchTimezone($search_key)
     {
-        if (!$search_key || ($search_key == '/')) return [];
+        if (!$search_key || ($search_key == '/')) {
+            return [];
+        }
         $timezones = $this->prepareTimezones();
-        $filtered_timezones = collect($timezones)->filter(function ($item) use ($search_key) {
+        $filtered_timezones = collect($timezones)->filter(function($item) use ($search_key) {
             return (strpos(strtolower($item['zone']), strtolower($search_key)) !== false);
         })->values();
         return $filtered_timezones;

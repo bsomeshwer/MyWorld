@@ -76,7 +76,7 @@ trait Continents
      */
     private function formatContinents($continents)
     {
-        return collect($continents)->transform(function ($item) {
+        return collect($continents)->transform(function($item) {
             $data['name'] = $item;
             $data['display_name'] = str_replace('_', ' ', title_case($item));
             $data['also_called_as'] = ($item == 'australia') ? 'Oceania' : null;

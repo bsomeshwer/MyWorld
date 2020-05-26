@@ -153,7 +153,7 @@ class States extends Cities
             return [];
         }
         $states = $this->formatStatesData();
-        return array_values(array_filter($states, function ($item) use ($search_key) {
+        return array_values(array_filter($states, function($item) use ($search_key) {
             return starts_with(strtolower($item['state']), strtolower($search_key));
         }));
     }
@@ -166,7 +166,7 @@ class States extends Cities
     public function countriesForStates()
     {
         $countries = $this->getOptimizedCountriesData();
-        return array_map(function ($item) {
+        return array_map(function($item) {
             return $item['country_name'];
         }, $countries);
     }
@@ -183,7 +183,7 @@ class States extends Cities
             return [];
         }
         $states = $this->formatStatesData();
-        return array_values(array_filter($states, function ($item) use ($country_name) {
+        return array_values(array_filter($states, function($item) use ($country_name) {
             return strtolower($item['country']) == strtolower($country_name);
         }));
     }

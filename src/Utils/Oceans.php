@@ -73,7 +73,7 @@ trait Oceans
      */
     private function formatOceans($oceans)
     {
-        return collect($oceans)->transform(function ($item) {
+        return collect($oceans)->transform(function($item) {
             $data['name'] = $item;
             $data['display_name'] = title_case($item);
             $data['also_called_as'] = ($item == 'antarctic') ? 'Southern Ocean' : null;

@@ -34,8 +34,11 @@ if (!function_exists('getPaginate')) {
             $from = ($page_number * $per_page) - $per_page;
             $prev_page_url = $request_url . "?page=" . ($page_number - 1);
         }
-        if ($page_number >= $ceil_val) $next_page_url = null;
-        else $next_page_url = $request_url . "?page=" . ($page_number + 1);
+        if ($page_number >= $ceil_val) {
+            $next_page_url = null;
+        } else {
+            $next_page_url = $request_url . "?page=" . ($page_number + 1);
+        }
         return [
             'current_page' => (int)$page_number,
             'first_page_url' => $request_url . "?page=1",

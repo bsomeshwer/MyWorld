@@ -116,7 +116,7 @@ class ISOCodes extends TimeZones
      */
     private function filterRegions($regions, $region)
     {
-        return collect($regions)->filter(function ($item, $key) use ($region) {
+        return collect($regions)->filter(function($item, $key) use ($region) {
             return ($region == null) ? true : (strpos(strtolower($key), strtolower($region)) === 0) ? true : false;
         });
     }
@@ -161,7 +161,7 @@ class ISOCodes extends TimeZones
         $iso_codes = $this->getOptimizedIsoData();
         $regions_data = $this->formatRegions($iso_codes);
         $regions = array_keys($regions_data);
-        return collect($regions)->map(function ($item) {
+        return collect($regions)->map(function($item) {
             return ['key' => strtolower($item), 'name' => $item];
         });
     }
@@ -175,9 +175,11 @@ class ISOCodes extends TimeZones
      */
     public function searchIsoCodes($key = null)
     {
-        if ($key == null) return [];
+        if ($key == null) {
+            return [];
+        }
         $iso_data = $this->getOptimizedIsoData();
-        return array_values(array_filter($iso_data, function ($item) use ($key) {
+        return array_values(array_filter($iso_data, function($item) use ($key) {
             return (str_contains(strtolower($item['name']), strtolower($key)) ||
                 str_contains(strtolower($item['alpha_2']), strtolower($key)) ||
                 str_contains(strtolower($item['alpha_3']), strtolower($key)) ||
@@ -194,11 +196,11 @@ class ISOCodes extends TimeZones
      */
     private function filterIsoInfoByCountryName($iso_codes, $name)
     {
-        return collect($iso_codes)->map(function ($item, $key) {
+        return collect($iso_codes)->map(function($item, $key) {
             $item['display_name'] = $item['name'];
             $item['name'] = strtolower(studly_case($item['name']));
             return $item;
-        })->groupBy('name')->filter(function ($item, $key) use ($name) {
+        })->groupBy('name')->filter(function($item, $key) use ($name) {
             return strpos($key, $name) === 0;
         })->collapse();
     }
@@ -211,10 +213,14 @@ class ISOCodes extends TimeZones
      */
     public function isoInfoByCountryName($name = null)
     {
-        if ($name == null) return [];
+        if ($name == null) {
+            return [];
+        }
         $iso_codes = $this->getOptimizedIsoData();
         $result = $this->filterIsoInfoByCountryName($iso_codes, $name);
-        if ($result == null) return [];
+        if ($result == null) {
+            return [];
+        }
         return $result;
     }
 
