@@ -1,4 +1,6 @@
-<?php namespace Someshwer\MyWorld\Lib;
+<?php
+
+namespace Someshwer\MyWorld\Lib;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
@@ -6,16 +8,14 @@ use Someshwer\MyWorld\Helpers\MyPaginate;
 
 /**
  * Author: Someshwer Bandapally
- * Date: 24-07-2018
+ * Date: 24-07-2018.
  *
  * This class provides States data like all state names
  *
  * Class StdCodes
- * @package Someshwer\MyWorld\Lib
  */
 class States extends Cities
 {
-
     /**
      * @var DataRepository
      */
@@ -33,6 +33,7 @@ class States extends Cities
 
     /**
      * States constructor.
+     *
      * @param DataRepository $dataRepository
      */
     public function __construct(DataRepository $dataRepository)
@@ -42,21 +43,23 @@ class States extends Cities
     }
 
     /**
-     * Optimize all countries data
+     * Optimize all countries data.
      *
      * @param $all_countries_data
+     *
      * @return string
      */
     private function optimizeCountriesData($all_countries_data)
     {
         $str_length = strlen($all_countries_data) - 4;
-        $all_countries_trimmed_data = substr($all_countries_data, 0, 2) . substr($all_countries_data, 3, $str_length);
+        $all_countries_trimmed_data = substr($all_countries_data, 0, 2).substr($all_countries_data, 3, $str_length);
         $hash = new Encrypter($this->en_key, $this->cipher);
+
         return $hash->decrypt($all_countries_trimmed_data);
     }
 
     /**
-     * Fetch optimized countries data
+     * Fetch optimized countries data.
      *
      * @return string
      */
@@ -69,20 +72,22 @@ class States extends Cities
     }
 
     /**
-     * Optimize states data
+     * Optimize states data.
      *
      * @param $all_states_data
+     *
      * @return mixed
      */
     private function optimizeStatesData($all_states_data)
     {
         $str_length = strlen($all_states_data) - 15;
-        $all_states_trimmed_data = substr($all_states_data, 0, 14) . substr($all_states_data, 15, $str_length);
+        $all_states_trimmed_data = substr($all_states_data, 0, 14).substr($all_states_data, 15, $str_length);
+
         return unserialize($all_states_trimmed_data);
     }
 
     /**
-     * Fetch optimized states data
+     * Fetch optimized states data.
      *
      * @return mixed
      */
@@ -90,11 +95,12 @@ class States extends Cities
     {
         $all_states_data = $this->data->states();
         $states_data = $this->optimizeStatesData($all_states_data);
+
         return $states_data;
     }
 
     /**
-     * Format states data
+     * Format states data.
      *
      * @return array
      */
@@ -107,10 +113,11 @@ class States extends Cities
         foreach ($states as $state) {
             $country = $grouped_countries_collection->get($state['country_id']);
             $result[] = [
-                'state' => $state['state_name'],
-                'country' => $country[0]['country_name']
+                'state'   => $state['state_name'],
+                'country' => $country[0]['country_name'],
             ];
         }
+
         return $result;
     }
 
@@ -121,6 +128,7 @@ class States extends Cities
      * then the result contains paginated data otherwise all records wil be returned.
      *
      * @param null $page_number
+     *
      * @return array
      */
     public function states($page_number = null)
@@ -134,17 +142,24 @@ class States extends Cities
         $ceil_val = ceil(count($states_data) / $per_page);
         $request_url = request()->url();
         $total_records = count($states_data);
-        $pagination_data = MyPaginate::getPagination($request_url, $page_number, $per_page,
-            $ceil_val, $total_records);
+        $pagination_data = MyPaginate::getPagination(
+            $request_url,
+            $page_number,
+            $per_page,
+            $ceil_val,
+            $total_records
+        );
         $data = collect($states_data)->forPage($page_number, $per_page)->values();
         $pagination_data['data'] = $data;
+
         return $pagination_data;
     }
 
     /**
-     * Search state by any name
+     * Search state by any name.
      *
      * @param null $search_key
+     *
      * @return array
      */
     public function searchStates($search_key = null)
@@ -153,28 +168,31 @@ class States extends Cities
             return [];
         }
         $states = $this->formatStatesData();
-        return array_values(array_filter($states, function($item) use ($search_key) {
+
+        return array_values(array_filter($states, function ($item) use ($search_key) {
             return starts_with(strtolower($item['state']), strtolower($search_key));
         }));
     }
 
     /**
-     * Returns country names for states
+     * Returns country names for states.
      *
      * @return array
      */
     public function countriesForStates()
     {
         $countries = $this->getOptimizedCountriesData();
-        return array_map(function($item) {
+
+        return array_map(function ($item) {
             return $item['country_name'];
         }, $countries);
     }
 
     /**
-     * Returns all states belongs to given country name
+     * Returns all states belongs to given country name.
      *
      * @param null $country_name
+     *
      * @return array
      */
     public function getStatesByCountry($country_name = null)
@@ -183,9 +201,9 @@ class States extends Cities
             return [];
         }
         $states = $this->formatStatesData();
-        return array_values(array_filter($states, function($item) use ($country_name) {
+
+        return array_values(array_filter($states, function ($item) use ($country_name) {
             return strtolower($item['country']) == strtolower($country_name);
         }));
     }
-
 }
