@@ -1,10 +1,11 @@
-# Laravel - My World
+# Laravel - World Countries
 
-[![Total Downloads](https://poser.pugx.org/someshwer/my-world/downloads.svg)](https://packagist.org/packages/someshwer/my-world)
-[![Latest Stable Version](https://poser.pugx.org/someshwer/my-world/v/stable.svg)](https://packagist.org/packages/someshwer/my-world)
-[![Latest Unstable Version](https://poser.pugx.org/someshwer/my-world/v/unstable.svg)](https://packagist.org/packages/someshwer/my-world)
+[![Build Status](https://travis-ci.com/bsomeshwer/world-countries.svg?branch=master)](https://travis-ci.com/bsomeshwer/world-countries)
+[![Total Downloads](https://poser.pugx.org/someshwer/world-countries/downloads.svg)](https://packagist.org/packages/someshwer/world-countries)
+[![Latest Stable Version](https://poser.pugx.org/someshwer/world-countries/v/stable.svg)](https://packagist.org/packages/someshwer/world-countries)
+[![Latest Unstable Version](https://poser.pugx.org/someshwer/world-countries/v/unstable.svg)](https://packagist.org/packages/someshwer/world-countries)
 
-Laravel MyWorld is a bundle for Laravel, providing useful world information that is all country names, timezones,
+Laravel WorldCountries is a bundle for Laravel, providing useful world information that is all country names, timezones,
 ISO country codes, STD codes of countries  etc.
 
 This package only provides countries data that is all country names for all most 195 countries over the world
@@ -23,18 +24,18 @@ as this package may not properly work with older versions of Laravel.
 
 Open terminal, go to root directory and run the following command:
 
-    composer require someshwer/my-world
+    composer require someshwer/world-countries
 
 The package will be installed.
 
-Add `Someshwer\MyWorld\WorldDataServiceProvider::class` class to `providers` array in `config/app.php` file.
+Add `Someshwer\WorldCountries\WorldDataServiceProvider::class` class to `providers` array in `config/app.php` file.
 
     Ex:-
     
     'providers' => [
         ...,
         ...,
-        Someshwer\MyWorld\WorldDataServiceProvider::class,
+        Someshwer\WorldCountries\WorldDataServiceProvider::class,
     ]
 
 Now add the alias to `aliases` array in config/app.php`.
@@ -44,12 +45,12 @@ Now add the alias to `aliases` array in config/app.php`.
     'aliases' => [
          ...,
          ...,
-         'World' => Someshwer\MyWorld\Facades\World::class,
+         'World' => Someshwer\WorldCountries\Facades\World::class,
     ]
 
 You can start by publishing the configuration.
 
-    $ php artisan vendor:publish --provider="Someshwer\MyWorld\WorldDataServiceProvider"
+    $ php artisan vendor:publish --provider="Someshwer\WorldCountries\WorldDataServiceProvider"
 
 That's it !! You are done with package installation...
 
