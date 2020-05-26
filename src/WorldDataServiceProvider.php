@@ -21,7 +21,7 @@ class WorldDataServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('bs-world', function () {
+        $this->app->bind('bs-world', function() {
             return new World(new DataRepository());
         });
     }

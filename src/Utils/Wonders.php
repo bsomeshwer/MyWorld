@@ -69,7 +69,7 @@ trait Wonders
      */
     private function formatWonders($wonders)
     {
-        return collect($wonders)->transform(function ($item, $key) {
+        return collect($wonders)->transform(function($item, $key) {
             $data['name'] = $key;
             $data['display_name'] = str_replace('_', ' ', title_case($key));
             $data['location'] = str_replace('_', ' ', title_case($item));

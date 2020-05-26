@@ -84,7 +84,7 @@ class Currencies extends StdCodes
         if (!$search_key) {
             return [];
         }
-        return collect($this->getOptimizedCurrenciesData())->filter(function ($item) use ($search_key) {
+        return collect($this->getOptimizedCurrenciesData())->filter(function($item) use ($search_key) {
             return ((strpos(strtolower($item['currency_name']), strtolower($search_key)) !== false) ||
                 (strpos(strtolower($item['country_name']), strtolower($search_key)) !== false));
         })->values();
@@ -101,7 +101,7 @@ class Currencies extends StdCodes
         if (!$country_name) {
             return [];
         }
-        return collect($this->getOptimizedCurrenciesData())->filter(function ($item) use ($country_name) {
+        return collect($this->getOptimizedCurrenciesData())->filter(function($item) use ($country_name) {
             return (strtolower($item['country_name']) == strtolower($country_name));
         })->values();
     }
@@ -117,7 +117,7 @@ class Currencies extends StdCodes
         if (!$country_code) {
             return [];
         }
-        return collect($this->getOptimizedCurrenciesData())->filter(function ($item) use ($country_code) {
+        return collect($this->getOptimizedCurrenciesData())->filter(function($item) use ($country_code) {
             return (strtolower($item['country_code']) == strtolower($country_code));
         })->values();
     }
@@ -133,7 +133,7 @@ class Currencies extends StdCodes
         if (!$currency_name) {
             return [];
         }
-        return collect($this->getOptimizedCurrenciesData())->filter(function ($item) use ($currency_name) {
+        return collect($this->getOptimizedCurrenciesData())->filter(function($item) use ($currency_name) {
             return (strpos(strtolower($item['currency_name']), strtolower($currency_name)) !== false);
         })->values();
     }
@@ -149,7 +149,7 @@ class Currencies extends StdCodes
         if (!$currency_code) {
             return [];
         }
-        return collect($this->getOptimizedCurrenciesData())->filter(function ($item) use ($currency_code) {
+        return collect($this->getOptimizedCurrenciesData())->filter(function($item) use ($currency_code) {
             return (strtolower($item['currency_code']) == strtolower($currency_code));
         })->values();
     }

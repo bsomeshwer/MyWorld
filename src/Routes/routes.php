@@ -7,7 +7,7 @@
  * Time: 01:39 AM
  */
 
-Route::get('getMyWorldPackageInfo', function () {
+Route::get('getMyWorldPackageInfo', function() {
 
     return [
         'package_name' => 'Laravel - My World',
