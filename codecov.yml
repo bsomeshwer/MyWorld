@@ -5,3 +5,4 @@ codecov:
     round: nearest
     range: "40...70"
     ignore:
+       - - "Someshwer\WorldCountries"
