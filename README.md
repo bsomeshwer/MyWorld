@@ -10,9 +10,9 @@
 
 [![codecov](https://codecov.io/gh/bsomeshwer/world-countries/branch/master/graph/badge.svg)](https://codecov.io/gh/bsomeshwer/world-countries)
 [![License](https://poser.pugx.org/someshwer/world-countries/license)](//packagist.org/packages/someshwer/world-countries)
-[![Latest Stable Version](https://poser.pugx.org/someshwer/world-countries/v)](//packagist.org/packages/someshwer/world-countries)
-[![Latest Unstable Version](https://poser.pugx.org/someshwer/world-countries/v/unstable)](//packagist.org/packages/someshwer/world-countries)
-[![Total Downloads](https://poser.pugx.org/someshwer/world-countries/downloads)](//packagist.org/packages/someshwer/world-countries)
+[![Latest Stable Version](https://poser.pugx.org/someshwer/world-countries/v/stable.svg)](//packagist.org/packages/someshwer/world-countries)
+[![Latest Unstable Version](https://poser.pugx.org/someshwer/world-countries/v/unstable.svg)](//packagist.org/packages/someshwer/world-countries)
+[![Total Downloads](https://poser.pugx.org/someshwer/world-countries/downloads.svg)](//packagist.org/packages/someshwer/world-countries)
 [![composer.lock](https://poser.pugx.org/someshwer/world-countries/composerlock)](//packagist.org/packages/someshwer/world-countries)
 
 Laravel WorldCountries is a bundle for Laravel, providing useful world information that is all country names, timezones,
