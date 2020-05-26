@@ -1,20 +1,20 @@
-<?php namespace Someshwer\MyWorld\Utils;
+<?php
+
+namespace Someshwer\MyWorld\Utils;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
 
 /**
  * Author: Someshwer Bandapally
- * Date: 14-07-2018
+ * Date: 14-07-2018.
  *
  * This class gives the list of continents names
  *
  * Class Continents
- * @package Someshwer\MyWorld\Lib
  */
 trait Continents
 {
-
     /**
      * @var DataRepository
      */
@@ -32,6 +32,7 @@ trait Continents
 
     /**
      * Continents constructor.
+     *
      * @param DataRepository $dataRepository
      */
     public function __construct(DataRepository $dataRepository)
@@ -40,7 +41,7 @@ trait Continents
     }
 
     /**
-     * Get optimized continents data
+     * Get optimized continents data.
      *
      * @return string
      */
@@ -53,25 +54,28 @@ trait Continents
     }
 
     /**
-     * Optimize continents data
+     * Optimize continents data.
      *
      * @param $all_continents_data
+     *
      * @return string
      */
     private function optimizeContinentsData($all_continents_data)
     {
         $str_length = strlen($all_continents_data) - 4;
-        $all_continents_trimmed_data = substr($all_continents_data, 0, 2) . substr($all_continents_data, 3, $str_length);
+        $all_continents_trimmed_data = substr($all_continents_data, 0, 2).substr($all_continents_data, 3, $str_length);
         // $hash = new Encrypter($this->en_key, Config::get('app.cipher'));
         $hash = new Encrypter($this->en_key, $this->cipher);
         $all_continents = $hash->decrypt($all_continents_trimmed_data);
+
         return $all_continents;
     }
 
     /**
-     * Format continents
+     * Format continents.
      *
      * @param $continents
+     *
      * @return $this
      */
     private function formatContinents($continents)
@@ -80,12 +84,13 @@ trait Continents
             $data['name'] = $item;
             $data['display_name'] = str_replace('_', ' ', title_case($item));
             $data['also_called_as'] = ($item == 'australia') ? 'Oceania' : null;
+
             return $data;
         });
     }
 
     /**
-     * Get list of continents names
+     * Get list of continents names.
      *
      * @return array
      */
@@ -93,7 +98,7 @@ trait Continents
     {
         $continents = $this->getOptimizedContinentsData();
         $formatted_continents = $this->formatContinents($continents);
+
         return ['continents' => $formatted_continents];
     }
-
 }

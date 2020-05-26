@@ -1,20 +1,20 @@
-<?php namespace Someshwer\MyWorld\Lib;
+<?php
+
+namespace Someshwer\MyWorld\Lib;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
 
 /**
  * Author: Someshwer Bandapally
- * Date: 18-07-2018
+ * Date: 18-07-2018.
  *
  * This class provides STD codes data
  *
  * Class StdCodes
- * @package Someshwer\MyWorld\Lib
  */
 class StdCodes extends States
 {
-
     /**
      * @var DataRepository
      */
@@ -32,6 +32,7 @@ class StdCodes extends States
 
     /**
      * StdCodes constructor.
+     *
      * @param DataRepository $dataRepository
      */
     public function __construct(DataRepository $dataRepository)
@@ -41,21 +42,23 @@ class StdCodes extends States
     }
 
     /**
-     * Optimize STD codes data
+     * Optimize STD codes data.
      *
      * @param $all_std_codes_data
+     *
      * @return string
      */
     private function optimizeStdCodesData($all_std_codes_data)
     {
         $str_length = strlen($all_std_codes_data) - 4;
-        $all_std_codes_trimmed_data = substr($all_std_codes_data, 0, 2) . substr($all_std_codes_data, 3, $str_length);
+        $all_std_codes_trimmed_data = substr($all_std_codes_data, 0, 2).substr($all_std_codes_data, 3, $str_length);
         $hash = new Encrypter($this->en_key, $this->cipher);
+
         return $hash->decrypt($all_std_codes_trimmed_data);
     }
 
     /**
-     * Fetch optimized std codes data
+     * Fetch optimized std codes data.
      *
      * @return string
      */
@@ -68,7 +71,7 @@ class StdCodes extends States
     }
 
     /**
-     * Returns all std codes
+     * Returns all std codes.
      *
      * @return string
      */
@@ -78,9 +81,10 @@ class StdCodes extends States
     }
 
     /**
-     * Search STD codes
+     * Search STD codes.
      *
      * @param null $search_string
+     *
      * @return array|static
      */
     public function searchStdCodes($search_string = null)
@@ -89,19 +93,21 @@ class StdCodes extends States
             return [];
         }
         $std_codes = $this->getOptimizedStdCodesData();
+
         return collect($std_codes)->filter(function ($item) use ($search_string) {
-            return ((substr(strtolower($item['country_name']), 0, strlen($search_string)) == strtolower($search_string)) ||
+            return (substr(strtolower($item['country_name']), 0, strlen($search_string)) == strtolower($search_string)) ||
                 (strtolower($item['country_code']) == strtolower($search_string)) ||
-                (strpos(strtolower($item['std_code']), strtolower($search_string)) !== false));
+                (strpos(strtolower($item['std_code']), strtolower($search_string)) !== false);
         })->transform(function ($value) {
             return array_except($value, 'id');
         })->values();
     }
 
     /**
-     * Search STD code by country name
+     * Search STD code by country name.
      *
      * @param null $country_name
+     *
      * @return array|static
      */
     public function stdCodeByCountryName($country_name = null)
@@ -110,17 +116,19 @@ class StdCodes extends States
             return [];
         }
         $std_codes = $this->getOptimizedStdCodesData();
+
         return collect($std_codes)->filter(function ($item) use ($country_name) {
-            return (substr(strtolower($item['country_name']), 0, strlen($country_name)) == strtolower($country_name));
+            return substr(strtolower($item['country_name']), 0, strlen($country_name)) == strtolower($country_name);
         })->transform(function ($value) {
             return array_except($value, 'id');
         })->values();
     }
 
     /**
-     * Search STD code by country code
+     * Search STD code by country code.
      *
      * @param null $country_code
+     *
      * @return array|static
      */
     public function stdCodeByCountryCode($country_code = null)
@@ -129,11 +137,11 @@ class StdCodes extends States
             return [];
         }
         $std_codes = $this->getOptimizedStdCodesData();
+
         return collect($std_codes)->filter(function ($item) use ($country_code) {
-            return (strtolower($item['country_code']) == strtolower($country_code));
+            return strtolower($item['country_code']) == strtolower($country_code);
         })->transform(function ($value) {
             return array_except($value, 'id');
         })->values();
     }
-
 }

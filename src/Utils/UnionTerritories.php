@@ -1,20 +1,20 @@
-<?php namespace Someshwer\MyWorld\Utils;
+<?php
+
+namespace Someshwer\MyWorld\Utils;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\MyWorld\Data\DataRepository;
 
 /**
  * Author: Someshwer Bandapally
- * Date: 14-07-2018
+ * Date: 14-07-2018.
  *
  * Gives union territories names
  *
  * Class UnionTerritories
- * @package Someshwer\MyWorld\Utils
  */
 trait UnionTerritories
 {
-
     /**
      * @var DataRepository
      */
@@ -32,6 +32,7 @@ trait UnionTerritories
 
     /**
      * UnionTerritories constructor.
+     *
      * @param DataRepository $dataRepository
      */
     public function __construct(DataRepository $dataRepository)
@@ -40,21 +41,23 @@ trait UnionTerritories
     }
 
     /**
-     * Optimizes union territories data
+     * Optimizes union territories data.
      *
      * @param $all_territories_data
+     *
      * @return string
      */
     private function optimizeTerritoriesData($all_territories_data)
     {
         $str_length = strlen($all_territories_data) - 4;
-        $all_territories_trimmed_data = substr($all_territories_data, 0, 2) . substr($all_territories_data, 3, $str_length);
+        $all_territories_trimmed_data = substr($all_territories_data, 0, 2).substr($all_territories_data, 3, $str_length);
         $hash = new Encrypter($this->en_key, $this->cipher);
+
         return $hash->decrypt($all_territories_trimmed_data);
     }
 
     /**
-     * Fetches union territories names from a file
+     * Fetches union territories names from a file.
      *
      * @return string
      */
@@ -62,13 +65,15 @@ trait UnionTerritories
     {
         $all_territories_data = $this->data->unionTerritories();
         $territories_data = $this->optimizeTerritoriesData($all_territories_data);
+
         return $territories_data;
     }
 
     /**
-     * Formats union territories
+     * Formats union territories.
      *
      * @param $territories
+     *
      * @return static
      */
     private function formatTerritories($territories)
@@ -78,12 +83,13 @@ trait UnionTerritories
             $data['display_name'] = str_replace('_', ' ', title_case($key));
             $data['capital'] = str_replace('_', ' ', title_case($item));
             $data['country'] = 'India';
+
             return $data;
         })->values();
     }
 
     /**
-     * Returns all union territories names
+     * Returns all union territories names.
      *
      * @return array
      */
@@ -91,7 +97,7 @@ trait UnionTerritories
     {
         $territories = $this->getOptimizedTerritoriesData();
         $formatted_territories = $this->formatTerritories($territories);
+
         return ['union_territories' => ['india' => $formatted_territories]];
     }
-
 }
