@@ -10,7 +10,7 @@
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Tests">
-            <directory suffix="Test.php">./tests</directory>
+            <directory suffix=".php">./tests</directory>
         </testsuite>
     </testsuites>
     <filter>
@@ -19,7 +19,7 @@
         </whitelist>
     </filter>
     <logging>
-        <log type="coverage-clover" target="build/logs/clover.xml"/>
+        <log type="coverage-clover" target="clover.xml"/>
     </logging>
     <php>
         <env name="APP_ENV" value="testing"/>

@@ -5,6 +5,7 @@ namespace Someshwer\WorldCountries\Lib;
 use Illuminate\Encryption\Encrypter;
 use Someshwer\WorldCountries\Data\DataRepository;
 use Someshwer\WorldCountries\Helpers\MyPaginate;
+use Illuminate\Support\Str;
 
 /**
  * Author: Someshwer Bandapally
@@ -197,10 +198,10 @@ class ISOCodes extends TimeZones
         $iso_data = $this->getOptimizedIsoData();
 
         return array_values(array_filter($iso_data, function ($item) use ($key) {
-            return str_contains(strtolower($item['name']), strtolower($key)) ||
-                str_contains(strtolower($item['alpha_2']), strtolower($key)) ||
-                str_contains(strtolower($item['alpha_3']), strtolower($key)) ||
-                str_contains(strtolower($item['country_numeric_code']), strtolower($key));
+            return Str::contains(strtolower($item['name']), strtolower($key)) ||
+            Str::contains(strtolower($item['alpha_2']), strtolower($key)) ||
+            Str::contains(strtolower($item['alpha_3']), strtolower($key)) ||
+            Str::contains(strtolower($item['country_numeric_code']), strtolower($key));
         }));
     }
 
@@ -216,7 +217,7 @@ class ISOCodes extends TimeZones
     {
         return collect($iso_codes)->map(function ($item, $key) {
             $item['display_name'] = $item['name'];
-            $item['name'] = strtolower(studly_case($item['name']));
+            $item['name'] = strtolower(Str::studly($item['name']));
 
             return $item;
         })->groupBy('name')->filter(function ($item, $key) use ($name) {

@@ -4,6 +4,7 @@ namespace Someshwer\WorldCountries\Utils;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\WorldCountries\Data\DataRepository;
+use Illuminate\Support\Str;
 
 /**
  * Author: Someshwer Bandapally
@@ -80,8 +81,8 @@ trait UnionTerritories
     {
         return collect($territories)->transform(function ($item, $key) {
             $data['name'] = $key;
-            $data['display_name'] = str_replace('_', ' ', title_case($key));
-            $data['capital'] = str_replace('_', ' ', title_case($item));
+            $data['display_name'] = str_replace('_', ' ', Str::title($key));
+            $data['capital'] = str_replace('_', ' ', Str::title($item));
             $data['country'] = 'India';
 
             return $data;

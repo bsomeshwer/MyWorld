@@ -5,6 +5,7 @@ namespace Someshwer\WorldCountries\Lib;
 use Illuminate\Encryption\Encrypter;
 use Someshwer\WorldCountries\Data\DataRepository;
 use Someshwer\WorldCountries\Helpers\MyPaginate;
+use Illuminate\Support\Str;
 
 class Cities
 {
@@ -193,7 +194,7 @@ class Cities
         $cities = $this->formatCitiesData();
 
         return array_values(array_filter($cities, function ($item) use ($search_key) {
-            return starts_with(strtolower($item['city']), strtolower($search_key));
+            return Str::startsWith(strtolower($item['city']), strtolower($search_key));
         }));
     }
 

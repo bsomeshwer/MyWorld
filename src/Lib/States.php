@@ -5,6 +5,7 @@ namespace Someshwer\WorldCountries\Lib;
 use Illuminate\Encryption\Encrypter;
 use Someshwer\WorldCountries\Data\DataRepository;
 use Someshwer\WorldCountries\Helpers\MyPaginate;
+use Illuminate\Support\Str;
 
 /**
  * Author: Someshwer Bandapally
@@ -170,7 +171,7 @@ class States extends Cities
         $states = $this->formatStatesData();
 
         return array_values(array_filter($states, function ($item) use ($search_key) {
-            return starts_with(strtolower($item['state']), strtolower($search_key));
+            return Str::startsWith(strtolower($item['state']), strtolower($search_key));
         }));
     }
 

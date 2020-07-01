@@ -4,6 +4,7 @@ namespace Someshwer\WorldCountries\Lib;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\WorldCountries\Data\DataRepository;
+use Illuminate\Support\Arr;
 
 /**
  * Author: Someshwer Bandapally
@@ -99,7 +100,7 @@ class StdCodes extends States
                 (strtolower($item['country_code']) == strtolower($search_string)) ||
                 (strpos(strtolower($item['std_code']), strtolower($search_string)) !== false);
         })->transform(function ($value) {
-            return array_except($value, 'id');
+            return Arr::except($value, 'id');
         })->values();
     }
 
@@ -120,7 +121,7 @@ class StdCodes extends States
         return collect($std_codes)->filter(function ($item) use ($country_name) {
             return substr(strtolower($item['country_name']), 0, strlen($country_name)) == strtolower($country_name);
         })->transform(function ($value) {
-            return array_except($value, 'id');
+            return Arr::except($value, 'id');
         })->values();
     }
 
@@ -141,7 +142,7 @@ class StdCodes extends States
         return collect($std_codes)->filter(function ($item) use ($country_code) {
             return strtolower($item['country_code']) == strtolower($country_code);
         })->transform(function ($value) {
-            return array_except($value, 'id');
+            return Arr::except($value, 'id');
         })->values();
     }
 }

@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1592770025">
+  <project timestamp="1592770025">
+    <file name="/home/babi/Storage/Work/countries/src/Config/world.php">
+      <line num="18" type="stmt" count="0"/>
+      <metrics loc="65" ncloc="23" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="1" coveredelements="0"/>
+    </file>
+    <package name="Someshwer\WorldCountries\Data">
+      <file name="/home/babi/Storage/Work/countries/src/Data/DataRepository.php">
+        <class name="Someshwer\WorldCountries\Data\DataRepository" namespace="Someshwer\WorldCountries\Data">
+          <metrics complexity="12" methods="12" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="35" coveredelements="35"/>
+        </class>
+        <line num="32" type="method" name="countries" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="44" type="method" name="countriesISOData" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="46" type="stmt" count="6"/>
+        <line num="48" type="stmt" count="6"/>
+        <line num="56" type="method" name="continents" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="68" type="method" name="oceans" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="80" type="method" name="unionTerritories" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="92" type="method" name="wonders" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="1"/>
+        <line num="107" type="method" name="timezones" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="110" type="stmt" count="4"/>
+        <line num="118" type="method" name="currencies" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="120" type="stmt" count="6"/>
+        <line num="122" type="stmt" count="6"/>
+        <line num="130" type="method" name="stdCodes" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="132" type="stmt" count="4"/>
+        <line num="134" type="stmt" count="4"/>
+        <line num="142" type="method" name="states" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="144" type="stmt" count="8"/>
+        <line num="146" type="stmt" count="8"/>
+        <line num="154" type="method" name="countriesHelper" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="156" type="stmt" count="9"/>
+        <line num="158" type="stmt" count="9"/>
+        <line num="161" type="method" name="cities" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="163" type="stmt" count="4"/>
+        <line num="165" type="stmt" count="4"/>
+        <metrics loc="167" ncloc="92" classes="1" methods="12" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="35" coveredelements="35"/>
+      </file>
+    </package>
+    <package name="Someshwer\WorldCountries\Facades">
+      <file name="/home/babi/Storage/Work/countries/src/Facades/World.php">
+        <class name="Someshwer\WorldCountries\Facades\World" namespace="Someshwer\WorldCountries\Facades">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="22" type="method" name="getFacadeAccessor" visibility="public" complexity="1" crap="1" count="39"/>
+        <line num="24" type="stmt" count="39"/>
+        <metrics loc="26" ncloc="13" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+    </package>
+    <package name="Someshwer\WorldCountries\Helpers">
+      <file name="/home/babi/Storage/Work/countries/src/Helpers/MyPaginate.php">
+        <class name="Someshwer\WorldCountries\Helpers\MyPaginate" namespace="Someshwer\WorldCountries\Helpers">
+          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="0" elements="21" coveredelements="0"/>
+        </class>
+        <line num="26" type="method" name="getPagination" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <metrics loc="56" ncloc="37" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="0" elements="21" coveredelements="0"/>
+      </file>
+    </package>
+    <file name="/home/babi/Storage/Work/countries/src/Helpers/MyPaginator.php">
+      <line num="12" type="stmt" count="0"/>
+      <line num="29" type="stmt" count="0"/>
+      <line num="30" type="stmt" count="0"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="32" type="stmt" count="0"/>
+      <line num="34" type="stmt" count="0"/>
+      <line num="35" type="stmt" count="0"/>
+      <line num="37" type="stmt" count="0"/>
+      <line num="38" type="stmt" count="0"/>
+      <line num="40" type="stmt" count="0"/>
+      <line num="44" type="stmt" count="0"/>
+      <line num="45" type="stmt" count="0"/>
+      <line num="46" type="stmt" count="0"/>
+      <line num="47" type="stmt" count="0"/>
+      <line num="48" type="stmt" count="0"/>
+      <line num="49" type="stmt" count="0"/>
+      <line num="50" type="stmt" count="0"/>
+      <line num="51" type="stmt" count="0"/>
+      <line num="52" type="stmt" count="0"/>
+      <line num="53" type="stmt" count="0"/>
+      <line num="54" type="stmt" count="0"/>
+      <metrics loc="57" ncloc="34" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="0" elements="21" coveredelements="0"/>
+    </file>
+    <package name="Someshwer\WorldCountries\Lib">
+      <file name="/home/babi/Storage/Work/countries/src/Lib/Cities.php">
+        <class name="Someshwer\WorldCountries\Lib\Cities" namespace="Someshwer\WorldCountries\Lib">
+          <metrics complexity="20" methods="14" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="73" coveredstatements="57" elements="87" coveredelements="67"/>
+        </class>
+        <line num="32" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="39"/>
+        <line num="34" type="stmt" count="39"/>
+        <line num="35" type="stmt" count="39"/>
+        <line num="44" type="method" name="optimizeCountriesData" visibility="private" complexity="1" crap="1" count="5"/>
+        <line num="46" type="stmt" count="5"/>
+        <line num="47" type="stmt" count="5"/>
+        <line num="48" type="stmt" count="5"/>
+        <line num="50" type="stmt" count="5"/>
+        <line num="58" type="method" name="getOptimizedCountriesData" visibility="private" complexity="1" crap="1" count="5"/>
+        <line num="60" type="stmt" count="5"/>
+        <line num="61" type="stmt" count="5"/>
+        <line num="63" type="stmt" count="5"/>
+        <line num="73" type="method" name="optimizeStatesData" visibility="private" complexity="1" crap="1" count="5"/>
+        <line num="75" type="stmt" count="5"/>
+        <line num="76" type="stmt" count="5"/>
+        <line num="78" type="stmt" count="5"/>
+        <line num="86" type="method" name="getOptimizedStatesData" visibility="private" complexity="1" crap="1" count="5"/>
+        <line num="88" type="stmt" count="5"/>
+        <line num="89" type="stmt" count="5"/>
+        <line num="91" type="stmt" count="5"/>
+        <line num="101" type="method" name="optimizeCitiesData" visibility="private" complexity="1" crap="1" count="4"/>
+        <line num="103" type="stmt" count="4"/>
+        <line num="104" type="stmt" count="4"/>
+        <line num="106" type="stmt" count="4"/>
+        <line num="114" type="method" name="getOptimizedCitiesData" visibility="private" complexity="1" crap="1" count="4"/>
+        <line num="116" type="stmt" count="4"/>
+        <line num="117" type="stmt" count="4"/>
+        <line num="119" type="stmt" count="4"/>
+        <line num="127" type="method" name="formatCitiesData" visibility="private" complexity="2" crap="2" count="4"/>
+        <line num="129" type="stmt" count="4"/>
+        <line num="130" type="stmt" count="4"/>
+        <line num="131" type="stmt" count="4"/>
+        <line num="132" type="stmt" count="4"/>
+        <line num="133" type="stmt" count="4"/>
+        <line num="134" type="stmt" count="4"/>
+        <line num="135" type="stmt" count="4"/>
+        <line num="136" type="stmt" count="4"/>
+        <line num="137" type="stmt" count="4"/>
+        <line num="138" type="stmt" count="4"/>
+        <line num="139" type="stmt" count="4"/>
+        <line num="140" type="stmt" count="4"/>
+        <line num="141" type="stmt" count="4"/>
+        <line num="145" type="stmt" count="4"/>
+        <line num="158" type="method" name="cities" visibility="public" complexity="3" crap="7.02" count="1"/>
+        <line num="160" type="stmt" count="1"/>
+        <line num="161" type="stmt" count="1"/>
+        <line num="162" type="stmt" count="1"/>
+        <line num="163" type="stmt" count="1"/>
+        <line num="165" type="stmt" count="0"/>
+        <line num="166" type="stmt" count="0"/>
+        <line num="167" type="stmt" count="0"/>
+        <line num="168" type="stmt" count="0"/>
+        <line num="169" type="stmt" count="0"/>
+        <line num="170" type="stmt" count="0"/>
+        <line num="171" type="stmt" count="0"/>
+        <line num="172" type="stmt" count="0"/>
+        <line num="173" type="stmt" count="0"/>
+        <line num="174" type="stmt" count="0"/>
+        <line num="176" type="stmt" count="0"/>
+        <line num="177" type="stmt" count="0"/>
+        <line num="179" type="stmt" count="0"/>
+        <line num="189" type="method" name="searchCities" visibility="public" complexity="2" crap="2.03" count="1"/>
+        <line num="191" type="stmt" count="1"/>
+        <line num="192" type="stmt" count="0"/>
+        <line num="194" type="stmt" count="1"/>
+        <line num="197" type="stmt" count="1"/>
+        <line num="198" type="stmt" count="1"/>
+        <line num="207" type="method" name="statesForCities" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="209" type="stmt" count="1"/>
+        <line num="212" type="stmt" count="1"/>
+        <line num="213" type="stmt" count="1"/>
+        <line num="222" type="method" name="countriesForCities" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="224" type="stmt" count="1"/>
+        <line num="227" type="stmt" count="1"/>
+        <line num="228" type="stmt" count="1"/>
+        <line num="238" type="method" name="getCitiesByStateName" visibility="public" complexity="2" crap="2.03" count="1"/>
+        <line num="240" type="stmt" count="1"/>
+        <line num="241" type="stmt" count="0"/>
+        <line num="243" type="stmt" count="1"/>
+        <line num="246" type="stmt" count="1"/>
+        <line num="247" type="stmt" count="1"/>
+        <line num="257" type="method" name="getCitiesByCountryName" visibility="public" complexity="2" crap="2.03" count="1"/>
+        <line num="259" type="stmt" count="1"/>
+        <line num="260" type="stmt" count="0"/>
+        <line num="262" type="stmt" count="1"/>
+        <line num="265" type="stmt" count="1"/>
+        <line num="266" type="stmt" count="1"/>
+        <metrics loc="268" ncloc="168" classes="1" methods="14" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="73" coveredstatements="57" elements="87" coveredelements="67"/>
+      </file>
+      <file name="/home/babi/Storage/Work/countries/src/Lib/Countries.php">
+        <class name="Someshwer\WorldCountries\Lib\Countries" namespace="Someshwer\WorldCountries\Lib">
+          <metrics complexity="5" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="20" elements="26" coveredelements="23"/>
+        </class>
+        <line num="39" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="39"/>
+        <line num="41" type="stmt" count="39"/>
+        <line num="42" type="stmt" count="39"/>
+        <line num="43" type="stmt" count="39"/>
+        <line num="52" type="method" name="optimizeCountryData" visibility="private" complexity="1" crap="1" count="2"/>
+        <line num="54" type="stmt" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="68" type="method" name="countries" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="87" type="method" name="searchCountry" visibility="public" complexity="2" crap="2.04" count="1"/>
+        <line num="89" type="stmt" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="91" type="stmt" count="1"/>
+        <line num="93" type="stmt" count="0"/>
+        <line num="94" type="stmt" count="0"/>
+        <line num="97" type="stmt" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <line num="100" type="stmt" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <metrics loc="104" ncloc="59" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="20" elements="26" coveredelements="23"/>
+      </file>
+      <file name="/home/babi/Storage/Work/countries/src/Lib/Currencies.php">
+        <class name="Someshwer\WorldCountries\Lib\Currencies" namespace="Someshwer\WorldCountries\Lib">
+          <metrics complexity="15" methods="9" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="33" coveredstatements="25" elements="42" coveredelements="29"/>
+        </class>
+        <line num="33" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="39"/>
+        <line num="35" type="stmt" count="39"/>
+        <line num="36" type="stmt" count="39"/>
+        <line num="37" type="stmt" count="39"/>
+        <line num="46" type="method" name="optimizeCurrenciesData" visibility="private" complexity="1" crap="1" count="6"/>
+        <line num="48" type="stmt" count="6"/>
+        <line num="49" type="stmt" count="6"/>
+        <line num="50" type="stmt" count="6"/>
+        <line num="52" type="stmt" count="6"/>
+        <line num="60" type="method" name="getOptimizedCurrenciesData" visibility="private" complexity="1" crap="1" count="6"/>
+        <line num="62" type="stmt" count="6"/>
+        <line num="63" type="stmt" count="6"/>
+        <line num="64" type="stmt" count="6"/>
+        <line num="66" type="stmt" count="6"/>
+        <line num="74" type="method" name="currencies" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="86" type="method" name="searchCurrency" visibility="public" complexity="3" crap="3.07" count="1"/>
+        <line num="88" type="stmt" count="1"/>
+        <line num="89" type="stmt" count="0"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="95" type="stmt" count="1"/>
+        <line num="105" type="method" name="currencyByCountryName" visibility="public" complexity="2" crap="2.06" count="1"/>
+        <line num="107" type="stmt" count="1"/>
+        <line num="108" type="stmt" count="0"/>
+        <line num="112" type="stmt" count="1"/>
+        <line num="113" type="stmt" count="1"/>
+        <line num="123" type="method" name="currencyByCountryCode" visibility="public" complexity="2" crap="2.06" count="2"/>
+        <line num="125" type="stmt" count="2"/>
+        <line num="126" type="stmt" count="0"/>
+        <line num="130" type="stmt" count="2"/>
+        <line num="131" type="stmt" count="2"/>
+        <line num="141" type="method" name="currencyByCurrencyName" visibility="public" complexity="2" crap="2.06" count="1"/>
+        <line num="143" type="stmt" count="1"/>
+        <line num="144" type="stmt" count="0"/>
+        <line num="148" type="stmt" count="1"/>
+        <line num="149" type="stmt" count="1"/>
+        <line num="159" type="method" name="currencyByCurrencyCode" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="161" type="stmt" count="0"/>
+        <line num="162" type="stmt" count="0"/>
+        <line num="166" type="stmt" count="0"/>
+        <line num="167" type="stmt" count="0"/>
+        <metrics loc="169" ncloc="100" classes="1" methods="9" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="33" coveredstatements="25" elements="42" coveredelements="29"/>
+      </file>
+      <file name="/home/babi/Storage/Work/countries/src/Lib/ISOCodes.php">
+        <class name="Someshwer\WorldCountries\Lib\ISOCodes" namespace="Someshwer\WorldCountries\Lib">
+          <metrics complexity="32" methods="14" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="81" coveredstatements="57" elements="95" coveredelements="65"/>
+        </class>
+        <line num="40" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="39"/>
+        <line num="42" type="stmt" count="39"/>
+        <line num="43" type="stmt" count="39"/>
+        <line num="44" type="stmt" count="39"/>
+        <line num="53" type="method" name="optimizeISOData" visibility="private" complexity="1" crap="1" count="6"/>
+        <line num="55" type="stmt" count="6"/>
+        <line num="56" type="stmt" count="6"/>
+        <line num="58" type="stmt" count="6"/>
+        <line num="59" type="stmt" count="6"/>
+        <line num="61" type="stmt" count="6"/>
+        <line num="69" type="method" name="getOptimizedIsoData" visibility="private" complexity="1" crap="1" count="6"/>
+        <line num="71" type="stmt" count="6"/>
+        <line num="72" type="stmt" count="6"/>
+        <line num="74" type="stmt" count="6"/>
+        <line num="85" type="method" name="optimizeIsoResult" visibility="private" complexity="5" crap="5.12" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="88" type="stmt" count="1"/>
+        <line num="89" type="stmt" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="91" type="stmt" count="0"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="104" type="method" name="formatRegions" visibility="private" complexity="3" crap="3" count="2"/>
+        <line num="106" type="stmt" count="2"/>
+        <line num="107" type="stmt" count="2"/>
+        <line num="108" type="stmt" count="2"/>
+        <line num="109" type="stmt" count="2"/>
+        <line num="110" type="stmt" count="2"/>
+        <line num="112" type="stmt" count="2"/>
+        <line num="115" type="stmt" count="2"/>
+        <line num="126" type="method" name="filterRegions" visibility="private" complexity="3" crap="3" count="1"/>
+        <line num="129" type="stmt" count="1"/>
+        <line num="130" type="stmt" count="1"/>
+        <line num="145" type="method" name="isoCodes" visibility="public" complexity="3" crap="7.02" count="1"/>
+        <line num="147" type="stmt" count="1"/>
+        <line num="148" type="stmt" count="1"/>
+        <line num="149" type="stmt" count="1"/>
+        <line num="150" type="stmt" count="1"/>
+        <line num="152" type="stmt" count="0"/>
+        <line num="153" type="stmt" count="0"/>
+        <line num="154" type="stmt" count="0"/>
+        <line num="155" type="stmt" count="0"/>
+        <line num="156" type="stmt" count="0"/>
+        <line num="157" type="stmt" count="0"/>
+        <line num="158" type="stmt" count="0"/>
+        <line num="159" type="stmt" count="0"/>
+        <line num="160" type="stmt" count="0"/>
+        <line num="161" type="stmt" count="0"/>
+        <line num="163" type="stmt" count="0"/>
+        <line num="164" type="stmt" count="0"/>
+        <line num="166" type="stmt" count="0"/>
+        <line num="174" type="method" name="regions" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="176" type="stmt" count="1"/>
+        <line num="177" type="stmt" count="1"/>
+        <line num="178" type="stmt" count="1"/>
+        <line num="181" type="stmt" count="1"/>
+        <line num="182" type="stmt" count="1"/>
+        <line num="193" type="method" name="searchIsoCodes" visibility="public" complexity="5" crap="5.05" count="1"/>
+        <line num="195" type="stmt" count="1"/>
+        <line num="196" type="stmt" count="0"/>
+        <line num="198" type="stmt" count="1"/>
+        <line num="201" type="stmt" count="1"/>
+        <line num="202" type="stmt" count="1"/>
+        <line num="203" type="stmt" count="1"/>
+        <line num="204" type="stmt" count="1"/>
+        <line num="205" type="stmt" count="1"/>
+        <line num="216" type="method" name="filterIsoInfoByCountryName" visibility="private" complexity="1" crap="1" count="1"/>
+        <line num="219" type="stmt" count="1"/>
+        <line num="220" type="stmt" count="1"/>
+        <line num="222" type="stmt" count="1"/>
+        <line num="224" type="stmt" count="1"/>
+        <line num="225" type="stmt" count="1"/>
+        <line num="235" type="method" name="isoInfoByCountryName" visibility="public" complexity="3" crap="3.21" count="1"/>
+        <line num="237" type="stmt" count="1"/>
+        <line num="238" type="stmt" count="0"/>
+        <line num="240" type="stmt" count="1"/>
+        <line num="241" type="stmt" count="1"/>
+        <line num="242" type="stmt" count="1"/>
+        <line num="243" type="stmt" count="0"/>
+        <line num="246" type="stmt" count="1"/>
+        <line num="256" type="method" name="isoInfoByCode" visibility="public" complexity="2" crap="2.06" count="1"/>
+        <line num="258" type="stmt" count="1"/>
+        <line num="259" type="stmt" count="0"/>
+        <line num="261" type="stmt" count="1"/>
+        <line num="263" type="stmt" count="1"/>
+        <line num="273" type="method" name="isoCodesByRegion" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="275" type="stmt" count="1"/>
+        <line num="276" type="stmt" count="1"/>
+        <line num="278" type="stmt" count="1"/>
+        <line num="288" type="method" name="isoErrorResponse" visibility="private" complexity="2" crap="6" count="0"/>
+        <line num="290" type="stmt" count="0"/>
+        <line num="291" type="stmt" count="0"/>
+        <line num="292" type="stmt" count="0"/>
+        <line num="293" type="stmt" count="0"/>
+        <line num="294" type="stmt" count="0"/>
+        <line num="297" type="stmt" count="0"/>
+        <metrics loc="299" ncloc="179" classes="1" methods="14" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="81" coveredstatements="57" elements="95" coveredelements="65"/>
+      </file>
+      <file name="/home/babi/Storage/Work/countries/src/Lib/States.php">
+        <class name="Someshwer\WorldCountries\Lib\States" namespace="Someshwer\WorldCountries\Lib">
+          <metrics complexity="15" methods="10" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="41" elements="66" coveredelements="48"/>
+        </class>
+        <line num="40" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="39"/>
+        <line num="42" type="stmt" count="39"/>
+        <line num="43" type="stmt" count="39"/>
+        <line num="44" type="stmt" count="39"/>
+        <line num="53" type="method" name="optimizeCountriesData" visibility="private" complexity="1" crap="1" count="4"/>
+        <line num="55" type="stmt" count="4"/>
+        <line num="56" type="stmt" count="4"/>
+        <line num="57" type="stmt" count="4"/>
+        <line num="59" type="stmt" count="4"/>
+        <line num="67" type="method" name="getOptimizedCountriesData" visibility="private" complexity="1" crap="1" count="4"/>
+        <line num="69" type="stmt" count="4"/>
+        <line num="70" type="stmt" count="4"/>
+        <line num="72" type="stmt" count="4"/>
+        <line num="82" type="method" name="optimizeStatesData" visibility="private" complexity="1" crap="1" count="3"/>
+        <line num="84" type="stmt" count="3"/>
+        <line num="85" type="stmt" count="3"/>
+        <line num="87" type="stmt" count="3"/>
+        <line num="95" type="method" name="getOptimizedStatesData" visibility="private" complexity="1" crap="1" count="3"/>
+        <line num="97" type="stmt" count="3"/>
+        <line num="98" type="stmt" count="3"/>
+        <line num="100" type="stmt" count="3"/>
+        <line num="108" type="method" name="formatStatesData" visibility="private" complexity="2" crap="2" count="3"/>
+        <line num="110" type="stmt" count="3"/>
+        <line num="111" type="stmt" count="3"/>
+        <line num="112" type="stmt" count="3"/>
+        <line num="113" type="stmt" count="3"/>
+        <line num="114" type="stmt" count="3"/>
+        <line num="115" type="stmt" count="3"/>
+        <line num="116" type="stmt" count="3"/>
+        <line num="117" type="stmt" count="3"/>
+        <line num="118" type="stmt" count="3"/>
+        <line num="122" type="stmt" count="3"/>
+        <line num="135" type="method" name="states" visibility="public" complexity="3" crap="7.02" count="1"/>
+        <line num="137" type="stmt" count="1"/>
+        <line num="138" type="stmt" count="1"/>
+        <line num="139" type="stmt" count="1"/>
+        <line num="140" type="stmt" count="1"/>
+        <line num="142" type="stmt" count="0"/>
+        <line num="143" type="stmt" count="0"/>
+        <line num="144" type="stmt" count="0"/>
+        <line num="145" type="stmt" count="0"/>
+        <line num="146" type="stmt" count="0"/>
+        <line num="147" type="stmt" count="0"/>
+        <line num="148" type="stmt" count="0"/>
+        <line num="149" type="stmt" count="0"/>
+        <line num="150" type="stmt" count="0"/>
+        <line num="151" type="stmt" count="0"/>
+        <line num="153" type="stmt" count="0"/>
+        <line num="154" type="stmt" count="0"/>
+        <line num="156" type="stmt" count="0"/>
+        <line num="166" type="method" name="searchStates" visibility="public" complexity="2" crap="2.03" count="1"/>
+        <line num="168" type="stmt" count="1"/>
+        <line num="169" type="stmt" count="0"/>
+        <line num="171" type="stmt" count="1"/>
+        <line num="174" type="stmt" count="1"/>
+        <line num="175" type="stmt" count="1"/>
+        <line num="183" type="method" name="countriesForStates" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="185" type="stmt" count="1"/>
+        <line num="188" type="stmt" count="1"/>
+        <line num="189" type="stmt" count="1"/>
+        <line num="199" type="method" name="getStatesByCountry" visibility="public" complexity="2" crap="2.03" count="1"/>
+        <line num="201" type="stmt" count="1"/>
+        <line num="202" type="stmt" count="0"/>
+        <line num="204" type="stmt" count="1"/>
+        <line num="207" type="stmt" count="1"/>
+        <line num="208" type="stmt" count="1"/>
+        <metrics loc="210" ncloc="128" classes="1" methods="10" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="41" elements="66" coveredelements="48"/>
+      </file>
+      <file name="/home/babi/Storage/Work/countries/src/Lib/StdCodes.php">
+        <class name="Someshwer\WorldCountries\Lib\StdCodes" namespace="Someshwer\WorldCountries\Lib">
+          <metrics complexity="12" methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="28" elements="38" coveredelements="32"/>
+        </class>
+        <line num="39" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="39"/>
+        <line num="41" type="stmt" count="39"/>
+        <line num="42" type="stmt" count="39"/>
+        <line num="43" type="stmt" count="39"/>
+        <line num="52" type="method" name="optimizeStdCodesData" visibility="private" complexity="1" crap="1" count="4"/>
+        <line num="54" type="stmt" count="4"/>
+        <line num="55" type="stmt" count="4"/>
+        <line num="56" type="stmt" count="4"/>
+        <line num="58" type="stmt" count="4"/>
+        <line num="66" type="method" name="getOptimizedStdCodesData" visibility="private" complexity="1" crap="1" count="4"/>
+        <line num="68" type="stmt" count="4"/>
+        <line num="69" type="stmt" count="4"/>
+        <line num="71" type="stmt" count="4"/>
+        <line num="79" type="method" name="stdCodes" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="91" type="method" name="searchStdCodes" visibility="public" complexity="4" crap="4.03" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="0"/>
+        <line num="96" type="stmt" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <line num="100" type="stmt" count="1"/>
+        <line num="101" type="stmt" count="1"/>
+        <line num="103" type="stmt" count="1"/>
+        <line num="104" type="stmt" count="1"/>
+        <line num="114" type="method" name="stdCodeByCountryName" visibility="public" complexity="2" crap="2.02" count="1"/>
+        <line num="116" type="stmt" count="1"/>
+        <line num="117" type="stmt" count="0"/>
+        <line num="119" type="stmt" count="1"/>
+        <line num="122" type="stmt" count="1"/>
+        <line num="124" type="stmt" count="1"/>
+        <line num="125" type="stmt" count="1"/>
+        <line num="135" type="method" name="stdCodeByCountryCode" visibility="public" complexity="2" crap="2.02" count="1"/>
+        <line num="137" type="stmt" count="1"/>
+        <line num="138" type="stmt" count="0"/>
+        <line num="140" type="stmt" count="1"/>
+        <line num="143" type="stmt" count="1"/>
+        <line num="145" type="stmt" count="1"/>
+        <line num="146" type="stmt" count="1"/>
+        <metrics loc="148" ncloc="86" classes="1" methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="28" elements="38" coveredelements="32"/>
+      </file>
+      <file name="/home/babi/Storage/Work/countries/src/Lib/TimeZones.php">
+        <class name="Someshwer\WorldCountries\Lib\TimeZones" namespace="Someshwer\WorldCountries\Lib">
+          <metrics complexity="13" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="31" elements="40" coveredelements="35"/>
+        </class>
+        <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="39"/>
+        <line num="29" type="stmt" count="39"/>
+        <line num="30" type="stmt" count="39"/>
+        <line num="31" type="stmt" count="39"/>
+        <line num="38" type="method" name="prepareTimezones" visibility="private" complexity="2" crap="2" count="4"/>
+        <line num="40" type="stmt" count="4"/>
+        <line num="41" type="stmt" count="4"/>
+        <line num="42" type="stmt" count="4"/>
+        <line num="43" type="stmt" count="4"/>
+        <line num="44" type="stmt" count="4"/>
+        <line num="45" type="stmt" count="4"/>
+        <line num="46" type="stmt" count="4"/>
+        <line num="47" type="stmt" count="4"/>
+        <line num="50" type="stmt" count="4"/>
+        <line num="58" type="method" name="timezones" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="68" type="method" name="timezoneRegions" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="89" type="method" name="timezonesByRegion" visibility="public" complexity="3" crap="3.14" count="1"/>
+        <line num="91" type="stmt" count="1"/>
+        <line num="92" type="stmt" count="0"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="95" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="1"/>
+        <line num="97" type="stmt" count="1"/>
+        <line num="98" type="stmt" count="0"/>
+        <line num="101" type="stmt" count="1"/>
+        <line num="111" type="method" name="searchTimezone" visibility="public" complexity="3" crap="3.04" count="1"/>
+        <line num="113" type="stmt" count="1"/>
+        <line num="114" type="stmt" count="0"/>
+        <line num="116" type="stmt" count="1"/>
+        <line num="118" type="stmt" count="1"/>
+        <line num="119" type="stmt" count="1"/>
+        <line num="121" type="stmt" count="1"/>
+        <metrics loc="123" ncloc="78" classes="1" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="31" elements="40" coveredelements="35"/>
+      </file>
+      <file name="/home/babi/Storage/Work/countries/src/Lib/World.php">
+        <class name="Someshwer\WorldCountries\Lib\World" namespace="Someshwer\WorldCountries\Lib">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+        </class>
+        <line num="38" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="39"/>
+        <line num="40" type="stmt" count="39"/>
+        <line num="41" type="stmt" count="39"/>
+        <line num="42" type="stmt" count="39"/>
+        <line num="47" type="method" name="info" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="50" type="stmt" count="3"/>
+        <metrics loc="59" ncloc="38" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+      </file>
+    </package>
+    <file name="/home/babi/Storage/Work/countries/src/Routes/routes.php">
+      <metrics loc="21" ncloc="-7" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="Someshwer\WorldCountries\Utils">
+      <file name="/home/babi/Storage/Work/countries/src/Utils/Continents.php">
+        <class name="Continents" namespace="Someshwer\WorldCountries\Utils">
+          <metrics complexity="6" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="16" elements="23" coveredelements="20"/>
+        </class>
+        <line num="39" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="49" type="method" name="getOptimizedContinentsData" visibility="private" complexity="1" crap="1" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="64" type="method" name="optimizeContinentsData" visibility="private" complexity="1" crap="1" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="82" type="method" name="formatContinents" visibility="private" complexity="2" crap="2" count="1"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="89" type="stmt" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="98" type="method" name="continents" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="100" type="stmt" count="1"/>
+        <line num="101" type="stmt" count="1"/>
+        <line num="103" type="stmt" count="1"/>
+        <metrics loc="105" ncloc="55" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="16" elements="23" coveredelements="20"/>
+      </file>
+      <file name="/home/babi/Storage/Work/countries/src/Utils/Oceans.php">
+        <class name="Oceans" namespace="Someshwer\WorldCountries\Utils">
+          <metrics complexity="6" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="15" elements="22" coveredelements="19"/>
+        </class>
+        <line num="39" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="51" type="method" name="optimizeOceansData" visibility="private" complexity="1" crap="1" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="65" type="method" name="getOptimizedOceansData" visibility="private" complexity="1" crap="1" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="80" type="method" name="formatOceans" visibility="private" complexity="2" crap="2" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="88" type="stmt" count="1"/>
+        <line num="96" type="method" name="oceans" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="98" type="stmt" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <line num="101" type="stmt" count="1"/>
+        <metrics loc="103" ncloc="57" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="15" elements="22" coveredelements="19"/>
+      </file>
+      <file name="/home/babi/Storage/Work/countries/src/Utils/UnionTerritories.php">
+        <class name="UnionTerritories" namespace="Someshwer\WorldCountries\Utils">
+          <metrics complexity="5" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="16" elements="23" coveredelements="20"/>
+        </class>
+        <line num="39" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="51" type="method" name="optimizeTerritoriesData" visibility="private" complexity="1" crap="1" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="65" type="method" name="getOptimizedTerritoriesData" visibility="private" complexity="1" crap="1" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="80" type="method" name="formatTerritories" visibility="private" complexity="1" crap="1" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="88" type="stmt" count="1"/>
+        <line num="89" type="stmt" count="1"/>
+        <line num="97" type="method" name="unionTerritories" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <line num="100" type="stmt" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <metrics loc="104" ncloc="58" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="16" elements="23" coveredelements="20"/>
+      </file>
+      <file name="/home/babi/Storage/Work/countries/src/Utils/Wonders.php">
+        <class name="Wonders" namespace="Someshwer\WorldCountries\Utils">
+          <metrics complexity="5" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="15" elements="22" coveredelements="19"/>
+        </class>
+        <line num="34" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="46" type="method" name="optimizeWondersData" visibility="private" complexity="1" crap="1" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="60" type="method" name="getOptimizedWondersData" visibility="private" complexity="1" crap="1" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="75" type="method" name="formatWonders" visibility="private" complexity="1" crap="1" count="1"/>
+        <line num="78" type="stmt" count="1"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="91" type="method" name="wonders" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="1"/>
+        <metrics loc="98" ncloc="57" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="15" elements="22" coveredelements="19"/>
+      </file>
+    </package>
+    <package name="Someshwer\WorldCountries">
+      <file name="/home/babi/Storage/Work/countries/src/WorldDataServiceProvider.php">
+        <class name="Someshwer\WorldCountries\WorldDataServiceProvider" namespace="Someshwer\WorldCountries">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+        </class>
+        <line num="22" type="method" name="register" visibility="public" complexity="1" crap="1" count="39"/>
+        <line num="25" type="stmt" count="39"/>
+        <line num="26" type="stmt" count="39"/>
+        <line num="27" type="stmt" count="39"/>
+        <line num="34" type="method" name="boot" visibility="public" complexity="1" crap="1" count="39"/>
+        <line num="37" type="stmt" count="39"/>
+        <line num="38" type="stmt" count="39"/>
+        <metrics loc="39" ncloc="21" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </file>
+    </package>
+    <metrics files="19" loc="2221" ncloc="1276" classes="16" methods="102" coveredmethods="73" conditionals="0" coveredconditionals="0" statements="475" coveredstatements="354" elements="577" coveredelements="427"/>
+  </project>
+</coverage>

@@ -4,6 +4,7 @@ namespace Someshwer\WorldCountries\Utils;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\WorldCountries\Data\DataRepository;
+use Illuminate\Support\Str;
 
 /**
  * Author: Someshwer Bandapally
@@ -80,7 +81,7 @@ trait Oceans
     {
         return collect($oceans)->transform(function ($item) {
             $data['name'] = $item;
-            $data['display_name'] = title_case($item);
+            $data['display_name'] = Str::title($item);
             $data['also_called_as'] = ($item == 'antarctic') ? 'Southern Ocean' : null;
 
             return $data;

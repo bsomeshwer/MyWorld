@@ -4,6 +4,7 @@ namespace Someshwer\WorldCountries\Lib;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\WorldCountries\Data\DataRepository;
+use Illuminate\Support\Str;
 
 /**
  * Author: Someshwer Bandapally
@@ -69,8 +70,8 @@ class Countries extends ISOCodes
         $all_countries_data = $this->data->countries();
         $all_countries = $this->optimizeCountryData($all_countries_data);
         $countries = collect($all_countries)->map(function ($item) {
-            // return title_case(str_replace('-',' ', $item));
-            return studly_case($item);
+            // return Str::title(str_replace('-',' ', $item));
+            return Str::studly($item);
         });
 
         return ['countries' => $countries];
@@ -89,11 +90,11 @@ class Countries extends ISOCodes
         $all_countries = $this->optimizeCountryData($all_countries_data);
         if ($search_string == null) {
             return array_map(function ($it) {
-                return studly_case($it);
+                return Str::studly($it);
             }, $all_countries);
         }
         $countries = array_map(function ($it) {
-            return studly_case($it);
+            return Str::studly($it);
         }, array_filter($all_countries, function ($item) use ($search_string) {
             return strpos($item, strtolower($search_string)) === 0;
         }));

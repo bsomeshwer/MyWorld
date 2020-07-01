@@ -4,6 +4,7 @@ namespace Someshwer\WorldCountries\Utils;
 
 use Illuminate\Encryption\Encrypter;
 use Someshwer\WorldCountries\Data\DataRepository;
+use Illuminate\Support\Str;
 
 /**
  * Author: Someshwer Bandapally
@@ -82,7 +83,7 @@ trait Continents
     {
         return collect($continents)->transform(function ($item) {
             $data['name'] = $item;
-            $data['display_name'] = str_replace('_', ' ', title_case($item));
+            $data['display_name'] = str_replace('_', ' ', Str::title($item));
             $data['also_called_as'] = ($item == 'australia') ? 'Oceania' : null;
 
             return $data;
